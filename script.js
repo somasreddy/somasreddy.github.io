@@ -274,24 +274,27 @@ function toggleMobileMenu() {
 
 // Add click handlers for CTA buttons
 document.addEventListener('DOMContentLoaded', function() {
-    // Email CTA buttons
-    const quickEmailBtn = document.querySelector('.cta-buttons .btn-secondary');
+    // Select all buttons with the appropriate classes
+    const ctaButtons = document.querySelectorAll('.cta-buttons .btn');
+    
+    // Find the buttons by their text content
+    const quickEmailBtn = Array.from(ctaButtons).find(btn => btn.textContent.trim().includes('Quick Email'));
+    const scheduleInterviewBtn = Array.from(ctaButtons).find(btn => btn.textContent.trim().includes('Schedule Interview'));
+
+    // Quick Email Button
     if (quickEmailBtn) {
         quickEmailBtn.addEventListener('click', function() {
             window.location.href = 'mailto:Somasekhar.r@outlook.com?subject=Inquiry about QA Role';
         });
     }
     
-    // Schedule Interview buttons
-    const scheduleButtons = document.querySelectorAll('.cta-buttons .btn-primary');
-    scheduleButtons.forEach(button => {
-        if (button.textContent.includes('Schedule Interview')) {
-            button.addEventListener('click', function() {
-                // This will open your Calendly link in a new tab
-                window.open('https://calendly.com/your-username', '_blank');
-            });
-        }
-    });
+    // Schedule Interview Button
+    if (scheduleInterviewBtn) {
+        scheduleInterviewBtn.addEventListener('click', function() {
+            // Updated with your Calendly link
+            window.open('https://calendly.com/somasreddy', '_blank');
+        });
+    }
 });
 
 // Add scroll indicator animation
