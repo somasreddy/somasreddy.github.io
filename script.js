@@ -1,3 +1,35 @@
+// Advanced: Random Profile Picture with Preloading
+function setRandomProfilePicture() {
+    const profilePictures = [
+        'Pic1.jpg',
+        'Pic2.jpg',
+        'Pic3.jpg',
+        'Pic4.jpg',
+        'Pic5.jpg',
+         'Pic6.jpg',
+        'Pic7.jpg',
+        'Pic8.jpg',
+        'Pic9.jpg',
+        'Pic10.jpg'
+    ];
+    
+    const imagePath = 'images/';
+    const profileImg = document.getElementById('profile-picture');
+    
+    if (!profileImg) return;
+    
+    // Preload all images first
+    const preloadImages = [];
+    profilePictures.forEach(img => {
+        const preload = new Image();
+        preload.src = imagePath + img;
+        preloadImages.push(preload);
+    });
+    
+    // Then set a random one
+    const randomImage = profilePictures[Math.floor(Math.random() * profilePictures.length)];
+    profileImg.src = imagePath + randomImage;
+}
 // Navigation Active State Management
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
