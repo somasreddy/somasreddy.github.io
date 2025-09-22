@@ -456,4 +456,5 @@ console.log(`
 '',
 'color: #059669; font-size: 14px;',
 'color: #7c3aed; font-size: 12px;',
-'color: #dc2626; font-size: 1
+'color: #dc2626; font-size: 12px;'
+);
