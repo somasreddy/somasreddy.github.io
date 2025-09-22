@@ -6,7 +6,7 @@ function setRandomProfilePicture() {
         'Pic3.jpg',
         'Pic4.jpg',
         'Pic5.jpg',
-        'Pic6.jpg',
+         'Pic6.jpg',
         'Pic7.jpg',
         'Pic8.jpg',
         'Pic9.jpg',
@@ -133,6 +133,55 @@ function toggleProject(button) {
     }
 }
 
+// Contact Form Handling
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                company: formData.get('company'),
+                role: formData.get('role'),
+                message: formData.get('message')
+            };
+
+            // Validate required fields
+            if (!data.name || !data.email || !data.message) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+
+            // Simulate form submission
+            console.log('Form submitted with data:', data);
+            
+            // Show success message
+            contactForm.style.display = 'none';
+            formSuccess.style.display = 'block';
+            
+            // Hide success message and reset form after 3 seconds
+            setTimeout(() => {
+                formSuccess.style.display = 'none';
+                contactForm.style.display = 'block';
+                contactForm.reset();
+            }, 3000);
+        });
+    }
+});
+
 // Intersection Observer for Fade-in Animations
 function setupScrollAnimations() {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
@@ -162,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setupScrollAnimations();
     animateSkillBars();
-    setRandomProfilePicture(); // Calling the profile picture function here
+    setRandomProfilePicture();
 });
 
 // Navbar Background on Scroll
@@ -291,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Schedule Interview Button
     if (scheduleInterviewBtn) {
         scheduleInterviewBtn.addEventListener('click', function() {
-            // Updated with your Calendly link
+            // This will open your Calendly link in a new tab
             window.open('https://calendly.com/somasreddy', '_blank');
         });
     }
@@ -407,5 +456,4 @@ console.log(`
 '',
 'color: #059669; font-size: 14px;',
 'color: #7c3aed; font-size: 12px;',
-'color: #dc2626; font-size: 12px;'
-);
+'color: #dc2626; font-size: 1
