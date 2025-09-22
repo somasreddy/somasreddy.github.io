@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somasekhar V - Senior QA Engineer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Somasekhar V</div>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#timeline" class="nav-link">Journey</a>
+                <a href="#leadership" class="nav-link">Leadership</a>
+                <a href="#impact" class="nav-link">Impact</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <h1 class="hero-title animate-fade-in">Somasekhar V</h1>
+                    <p class="hero-subtitle animate-fade-in-delay-1">Senior QA Engineer | Driving Quality & Innovation</p>
+                    <p class="hero-description animate-fade-in-delay-2">
+                        8+ years of strategic Quality Assurance expertise, specializing in automation architecture, 
+                        security-conscious testing, and team leadership. Proven track record of reducing regression 
+                        cycles by 70% while mentoring teams to deliver exceptional software quality.
+                    </p>
+                    
+                    <!-- Stats Grid -->
+                    <div class="stats-grid animate-fade-in-delay-3">
+                        <div class="stat-card">
+                            <div class="stat-value">70%</div>
+                            <div class="stat-label">Cycle Reduction</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">100+</div>
+                            <div class="stat-label">APIs Automated</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">8+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Domains Mastered</div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="hero-contact animate-fade-in-delay-4">
+                        <div class="contact-item">
+                            <i data-lucide="mail" class="contact-icon"></i>
+                            <span>Somasekhar.r@outlook.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone" class="contact-icon"></i>
+                            <span>+91-900 8979099</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="map-pin" class="contact-icon"></i>
+                            <span>Bengaluru, India</span>
+                        </div>
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-actions animate-fade-in-delay-5">
+                        <button class="btn btn-primary" onclick="scrollToSection('contact')">Get In Touch</button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('projects')">View Projects</button>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="hero-image animate-scale-in">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Somasekhar V" class="profile-img">
+                        <div class="availability-badge">Available Now</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator animate-bounce">
+                <span>Scroll to explore</span>
+                <i data-lucide="chevron-down" class="bounce-arrow"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>Driven by passion for quality and innovation in software testing</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-left">
+                    <div class="about-item">
+                        <div class="about-icon blue">
+                            <i data-lucide="lightbulb"></i>
+                        </div>
+                        <div class="about-text">
+                            <h3>My Philosophy</h3>
+                            <p>"Quality is not an accident; it is always the result of intelligent effort, commitment to excellence, and skillful execution."</p>
+                        </div>
+                    </div>
+
+                    <div class="about-item">
+                        <div class="about-icon green">
+                            <i data-lucide="target"></i>
+                        </div>
+                        <div class="about-text">
+                            <h3>What Drives Me</h3>
+                            <p>I'm passionate about building robust, scalable test automation frameworks that not only catch bugs but prevent them. My approach combines technical excellence with strategic thinking.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-item">
+                        <div class="about-icon purple">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <div class="about-text">
+                            <h3>Career Goals</h3>
+                            <p>Seeking a senior leadership role where I can drive quality transformation at scale, mentor engineering teams, and contribute to building world-class software products.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-right">
+                    <div class="highlights-card">
+                        <div class="highlights-header">
+                            <i data-lucide="award"></i>
+                            <h3>Key Highlights</h3>
+                        </div>
+                        <ul class="highlights-list">
+                            <li>Architect of enterprise-grade automation frameworks</li>
+                            <li>Mentor to 25+ QA engineers across multiple organizations</li>
+                            <li>Champion of shift-left testing and BDD methodologies</li>
+                            <li>Expert in security-conscious testing practices</li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-stats">
+                        <div class="quick-stat blue">
+                            <div class="quick-stat-value">25+</div>
+                            <div class="quick-stat-label">Engineers Mentored</div>
+                        </div>
+                        <div class="quick-stat green">
+                            <div class="quick-stat-value">3</div>
+                            <div class="quick-stat-label">Frameworks Built</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Core Competencies</h2>
+                <p>Expertise built through years of hands-on experience and continuous learning</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i data-lucide="code"></i>
+                        </div>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-exp">7+ years</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-exp">3+ years</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-exp">2+ years</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-exp">5+ years</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Test Automation -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i data-lucide="test-tube"></i>
+                        </div>
+                        <h3>Test Automation</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Selenium WebDriver</span>
+                                <span class="skill-exp">7+ years</span>
+                                <span class="skill-percent">98%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="98"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Rest Assured</span>
+                                <span class="skill-exp">5+ years</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">TestNG</span>
+                                <span class="skill-exp">6+ years</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Cucumber BDD</span>
+                                <span class="skill-exp">4+ years</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Postman</span>
+                                <span class="skill-exp">5+ years</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CI/CD & DevOps -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i data-lucide="server"></i>
+                        </div>
+                        <h3>CI/CD & DevOps</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Jenkins</span>
+                                <span class="skill-exp">5+ years</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git/GitHub</span>
+                                <span class="skill-exp">6+ years</span>
+                                <span class="skill-percent">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Maven</span>
+                                <span class="skill-exp">5+ years</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Docker</span>
+                                <span class="skill-exp">2+ years</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testing Tools -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i data-lucide="wrench"></i>
+                        </div>
+                        <h3>Testing Tools</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JMeter</span>
+                                <span class="skill-exp">4+ years</span>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Jira</span>
+                                <span class="skill-exp">7+ years</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">QMetry</span>
+                                <span class="skill-exp">3+ years</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-exp">4+ years</span>
+                                <span class="skill-percent">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="82"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enterprise Impact Projects</h2>
+                <p>Automation frameworks and testing solutions delivering measurable business impact at scale</p>
+            </div>
+
+            <div class="projects-list">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <h3>Hybrid Test Automation Framework</h3>
+                            <div class="project-meta">
+                                <span class="company">Escriba IG Tech</span>
+                                <span class="duration">
+                                    <i data-lucide="calendar"></i>
+                                    Oct 2022 - Present
+                                </span>
+                                <span class="status active">Active</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/somasreddy/automation-framework" target="_blank" class="project-link" title="View Code">
+                                <i data-lucide="github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-challenge">
+                        <i data-lucide="target" class="challenge-icon"></i>
+                        <div>
+                            <h4>Challenge</h4>
+                            <p>Manual regression testing was taking 3-4 weeks per release cycle, creating bottlenecks in delivery and increasing risk of production issues.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="project-role">
+                            <i data-lucide="users"></i>
+                            <div>
+                                <h4>My Role</h4>
+                                <p>Lead Automation Architect</p>
+                            </div>
+                        </div>
+                        <div class="project-metrics">
+                            <i data-lucide="trending-up"></i>
+                            <div>
+                                <h4>Key Metrics</h4>
+                                <div class="metrics-tags">
+                                    <span class="metric-tag">Time Reduction: 70%</span>
+                                    <span class="metric-tag">Coverage: 85%</span>
+                                    <span class="metric-tag">Cost Savings: $200K/year</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-technologies">
+                        <h4>Technologies Used</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Selenium WebDriver</span>
+                            <span class="tech-tag">TestNG</span>
+                            <span class="tech-tag">Cucumber BDD</span>
+                            <span class="tech-tag">Maven</span>
+                            <span class="tech-tag">Jenkins</span>
+                        </div>
+                    </div>
+
+                    <button class="project-expand" onclick="toggleProject(this)">
+                        <i data-lucide="play" class="expand-icon"></i>
+                        Show Details
+                    </button>
+
+                    <div class="project-expandable">
+                        <div class="project-responsibilities">
+                            <h4>Key Responsibilities</h4>
+                            <ul>
+                                <li><i data-lucide="check-circle"></i> Designed scalable automation framework using Java, Selenium, and TestNG</li>
+                                <li><i data-lucide="check-circle"></i> Implemented Page Object Model with Cucumber BDD integration</li>
+                                <li><i data-lucide="check-circle"></i> Created comprehensive test data management system</li>
+                                <li><i data-lucide="check-circle"></i> Established CI/CD pipeline with Jenkins integration</li>
+                            </ul>
+                        </div>
+                        <div class="project-results">
+                            <h4>Results & Impact</h4>
+                            <ul>
+                                <li><i data-lucide="trending-up"></i> Reduced regression testing time from 3-4 weeks to 3-4 days (70% reduction)</li>
+                                <li><i data-lucide="trending-up"></i> Achieved 85% test automation coverage across critical user journeys</li>
+                                <li><i data-lucide="trending-up"></i> Enabled daily automated test execution with detailed reporting</li>
+                                <li><i data-lucide="trending-up"></i> Saved approximately $200K annually in manual testing costs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <h3>RESTful API Automation Suite</h3>
+                            <div class="project-meta">
+                                <span class="company">Cerner Healthcare Solutions</span>
+                                <span class="duration">
+                                    <i data-lucide="calendar"></i>
+                                    Aug 2018 - Oct 2022
+                                </span>
+                                <span class="status active">Active</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/somasreddy/api-automation" target="_blank" class="project-link" title="View Code">
+                                <i data-lucide="github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-challenge">
+                        <i data-lucide="target" class="challenge-icon"></i>
+                        <div>
+                            <h4>Challenge</h4>
+                            <p>Clinical assessment APIs lacked comprehensive automated testing, leading to frequent production issues and delayed releases.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="project-role">
+                            <i data-lucide="users"></i>
+                            <div>
+                                <h4>My Role</h4>
+                                <p>Senior Test Automation Engineer</p>
+                            </div>
+                        </div>
+                        <div class="project-metrics">
+                            <i data-lucide="trending-up"></i>
+                            <div>
+                                <h4>Key Metrics</h4>
+                                <div class="metrics-tags">
+                                    <span class="metric-tag">APIs Automated: 100+</span>
+                                    <span class="metric-tag">Uptime: 99.5%</span>
+                                    <span class="metric-tag">Issues Prevented: 15+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-technologies">
+                        <h4>Technologies Used</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Rest Assured</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">TestNG</span>
+                            <span class="tech-tag">Jenkins</span>
+                            <span class="tech-tag">Postman</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+
+                    <button class="project-expand" onclick="toggleProject(this)">
+                        <i data-lucide="play" class="expand-icon"></i>
+                        Show Details
+                    </button>
+
+                    <div class="project-expandable">
+                        <div class="project-responsibilities">
+                            <h4>Key Responsibilities</h4>
+                            <ul>
+                                <li><i data-lucide="check-circle"></i> Automated 100+ RESTful API endpoints using Rest Assured</li>
+                                <li><i data-lucide="check-circle"></i> Implemented comprehensive test data setup and teardown</li>
+                                <li><i data-lucide="check-circle"></i> Created detailed test reporting with Jenkins integration</li>
+                                <li><i data-lucide="check-circle"></i> Designed performance testing scenarios for high-load conditions</li>
+                            </ul>
+                        </div>
+                        <div class="project-results">
+                            <h4>Results & Impact</h4>
+                            <ul>
+                                <li><i data-lucide="trending-up"></i> Automated testing for 100+ API endpoints with comprehensive validation</li>
+                                <li><i data-lucide="trending-up"></i> Reduced API testing cycle time from 2 weeks to 2 days</li>
+                                <li><i data-lucide="trending-up"></i> Achieved 99.5% API uptime through proactive testing</li>
+                                <li><i data-lucide="trending-up"></i> Prevented 15+ critical production issues through early detection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-info">
+                            <h3>GST Gateway Testing Solution</h3>
+                            <div class="project-meta">
+                                <span class="company">Clonect Solutions</span>
+                                <span class="duration">
+                                    <i data-lucide="calendar"></i>
+                                    Jan 2017 - Aug 2018
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/somasreddy/gst-testing" target="_blank" class="project-link" title="View Code">
+                                <i data-lucide="github"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-challenge">
+                        <i data-lucide="target" class="challenge-icon"></i>
+                        <div>
+                            <h4>Challenge</h4>
+                            <p>GST Gateway system required rigorous functional and performance testing to handle high transaction volumes during peak periods.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-details">
+                        <div class="project-role">
+                            <i data-lucide="users"></i>
+                            <div>
+                                <h4>My Role</h4>
+                                <p>Test Engineer</p>
+                            </div>
+                        </div>
+                        <div class="project-metrics">
+                            <i data-lucide="trending-up"></i>
+                            <div>
+                                <h4>Key Metrics</h4>
+                                <div class="metrics-tags">
+                                    <span class="metric-tag">Concurrent Users: 10K+</span>
+                                    <span class="metric-tag">Test Coverage: 95%</span>
+                                    <span class="metric-tag">Zero: Critical Issues</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-technologies">
+                        <h4>Technologies Used</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Selenium</span>
+                            <span class="tech-tag">TestNG</span>
+                            <span class="tech-tag">JMeter</span>
+                            <span class="tech-tag">Log4j</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                    </div>
+
+                    <button class="project-expand" onclick="toggleProject(this)">
+                        <i data-lucide="play" class="expand-icon"></i>
+                        Show Details
+                    </button>
+
+                    <div class="project-expandable">
+                        <div class="project-responsibilities">
+                            <h4>Key Responsibilities</h4>
+                            <ul>
+                                <li><i data-lucide="check-circle"></i> Designed comprehensive functional test suites for GST workflows</li>
+                                <li><i data-lucide="check-circle"></i> Developed performance testing scenarios using JMeter</li>
+                                <li><i data-lucide="check-circle"></i> Created automated regression test packs using Selenium</li>
+                                <li><i data-lucide="check-circle"></i> Implemented detailed defect tracking and reporting processes</li>
+                            </ul>
+                        </div>
+                        <div class="project-results">
+                            <h4>Results & Impact</h4>
+                            <ul>
+                                <li><i data-lucide="trending-up"></i> Successfully validated system capacity for 10,000+ concurrent users</li>
+                                <li><i data-lucide="trending-up"></i> Achieved 95% functional test coverage across GST workflows</li>
+                                <li><i data-lucide="trending-up"></i> Reduced performance testing cycle from 1 month to 1 week</li>
+                                <li><i data-lucide="trending-up"></i> Ensured zero critical issues during production launches</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Let's Connect</h2>
+                <p>Ready to drive quality transformation at your organization? Let's discuss how I can contribute to your team's success.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-left">
+                    <h3>Get in Touch</h3>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:Somasekhar.r@outlook.com" class="contact-method">
+                            <div class="method-icon blue">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="method-info">
+                                <div class="method-title">Email</div>
+                                <div class="method-detail">Somasekhar.r@outlook.com</div>
+                            </div>
+                        </a>
+
+                        <a href="tel:+91-9008979099" class="contact-method">
+                            <div class="method-icon green">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div class="method-info">
+                                <div class="method-title">Phone</div>
+                                <div class="method-detail">+91-900 8979099</div>
+                            </div>
+                        </a>
+
+                        <div class="contact-method">
+                            <div class="method-icon purple">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div class="method-info">
+                                <div class="method-title">Location</div>
+                                <div class="method-detail">Bengaluru, Karnataka, India</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>Professional Profiles</h4>
+                        <div class="social-buttons">
+                            <a href="https://www.linkedin.com/in/somasreddy/" target="_blank" class="social-btn linkedin">
+                                <i data-lucide="linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/somasreddy" target="_blank" class="social-btn github">
+                                <i data-lucide="github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="availability-card">
+                        <div class="availability-header">
+                            <i data-lucide="check-circle"></i>
+                            <h4>Available Now</h4>
+                        </div>
+                        <p>Available for immediate opportunities</p>
+                        <div class="notice-period">
+                            <i data-lucide="clock"></i>
+                            <span>30 days notice period</span>
+                        </div>
+                    </div>
+
+                    <div class="target-roles">
+                        <h4>Target Roles</h4>
+                        <div class="roles-list">
+                            <div class="role-item">
+                                <i data-lucide="briefcase"></i>
+                                <span>Senior QA Engineer</span>
+                            </div>
+                            <div class="role-item">
+                                <i data-lucide="briefcase"></i>
+                                <span>Principal QA Engineer</span>
+                            </div>
+                            <div class="role-item">
+                                <i data-lucide="briefcase"></i>
+                                <span>QA Architect</span>
+                            </div>
+                            <div class="role-item">
+                                <i data-lucide="briefcase"></i>
+                                <span>Test Automation Lead</span>
+                            </div>
+                            <div class="role-item">
+                                <i data-lucide="briefcase"></i>
+                                <span>QA Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <div class="contact-form-container">
+                        <h3>Send a Message</h3>
+                        
+                        <div id="form-success" class="form-success" style="display: none;">
+                            <i data-lucide="check-circle"></i>
+                            <h4>Message Sent!</h4>
+                            <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                        </div>
+
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name *</label>
+                                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required placeholder="john@company.com">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="company">Company</label>
+                                    <input type="text" id="company" name="company" placeholder="Your Company">
+                                </div>
+                                <div class="form-group">
+                                    <label for="role">Your Role</label>
+                                    <input type="text" id="role" name="role" placeholder="Hiring Manager">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required rows="5" placeholder="I'd like to discuss opportunities for a Senior QA Engineer role..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">
+                                <i data-lucide="send"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Schedule CTA -->
+            <div class="schedule-cta">
+                <div class="cta-content">
+                    <h3>Ready to Schedule a Technical Interview?</h3>
+                    <p>I'm available for technical discussions, code reviews, and system architecture conversations. Let's explore how I can contribute to your team's quality engineering goals.</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary">
+                            <i data-lucide="calendar"></i>
+                            Schedule Interview
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i data-lucide="mail"></i>
+                            Quick Email
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Built with passion for quality engineering excellence</p>
+            <p class="footer-copy">© 2025 Somasekhar V. All rights reserved. | Senior QA Engineer | Quality Architect</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
