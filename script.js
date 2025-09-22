@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setupScrollAnimations();
     animateSkillBars();
-    setRandomProfilePicture();
+	setRandomProfilePicture();
 });
 
 // Navbar Background on Scroll
@@ -323,27 +323,26 @@ function toggleMobileMenu() {
 
 // Add click handlers for CTA buttons
 document.addEventListener('DOMContentLoaded', function() {
-    // Select all buttons with the appropriate classes
-    const ctaButtons = document.querySelectorAll('.cta-buttons .btn');
+    // Email CTA buttons
+    const emailButtons = document.querySelectorAll('button:contains("Quick Email"), button:contains("Send Message")');
+    emailButtons.forEach(button => {
+        if (button.textContent.includes('Quick Email')) {
+            button.addEventListener('click', function() {
+                window.location.href = 'mailto:Somasekhar.r@outlook.com?subject=Inquiry about QA Role';
+            });
+        }
+    });
     
-    // Find the buttons by their text content
-    const quickEmailBtn = Array.from(ctaButtons).find(btn => btn.textContent.trim().includes('Quick Email'));
-    const scheduleInterviewBtn = Array.from(ctaButtons).find(btn => btn.textContent.trim().includes('Schedule Interview'));
-
-    // Quick Email Button
-    if (quickEmailBtn) {
-        quickEmailBtn.addEventListener('click', function() {
-            window.location.href = 'mailto:Somasekhar.r@outlook.com?subject=Inquiry about QA Role';
-        });
-    }
-    
-    // Schedule Interview Button
-    if (scheduleInterviewBtn) {
-        scheduleInterviewBtn.addEventListener('click', function() {
-            // This will open your Calendly link in a new tab
-            window.open('https://calendly.com/somasreddy', '_blank');
-        });
-    }
+    // Schedule Interview buttons
+    const scheduleButtons = document.querySelectorAll('button:contains("Schedule Interview")');
+    scheduleButtons.forEach(button => {
+        if (button.textContent.includes('Schedule Interview')) {
+            button.addEventListener('click', function() {
+                // You can integrate with calendar booking services like Calendly
+                alert('Please email Somasekhar.r@outlook.com to schedule a technical interview.');
+            });
+        }
+    });
 });
 
 // Add scroll indicator animation
