@@ -6,7 +6,7 @@ function setRandomProfilePicture() {
         'Pic3.jpg',
         'Pic4.jpg',
         'Pic5.jpg',
-         'Pic6.jpg',
+        'Pic6.jpg',
         'Pic7.jpg',
         'Pic8.jpg',
         'Pic9.jpg',
@@ -133,55 +133,6 @@ function toggleProject(button) {
     }
 }
 
-// Contact Form Handling
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contact-form');
-    const formSuccess = document.getElementById('form-success');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                company: formData.get('company'),
-                role: formData.get('role'),
-                message: formData.get('message')
-            };
-
-            // Validate required fields
-            if (!data.name || !data.email || !data.message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-
-            // Validate email format
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-
-            // Simulate form submission
-            console.log('Form submitted with data:', data);
-            
-            // Show success message
-            contactForm.style.display = 'none';
-            formSuccess.style.display = 'block';
-            
-            // Hide success message and reset form after 3 seconds
-            setTimeout(() => {
-                formSuccess.style.display = 'none';
-                contactForm.style.display = 'block';
-                contactForm.reset();
-            }, 3000);
-        });
-    }
-});
-
 // Intersection Observer for Fade-in Animations
 function setupScrollAnimations() {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
@@ -211,6 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setupScrollAnimations();
     animateSkillBars();
+    setRandomProfilePicture(); // Calling the profile picture function here
 });
 
 // Navbar Background on Scroll
@@ -323,22 +275,20 @@ function toggleMobileMenu() {
 // Add click handlers for CTA buttons
 document.addEventListener('DOMContentLoaded', function() {
     // Email CTA buttons
-    const emailButtons = document.querySelectorAll('button:contains("Quick Email"), button:contains("Send Message")');
-    emailButtons.forEach(button => {
-        if (button.textContent.includes('Quick Email')) {
-            button.addEventListener('click', function() {
-                window.location.href = 'mailto:Somasekhar.r@outlook.com?subject=Inquiry about QA Role';
-            });
-        }
-    });
+    const quickEmailBtn = document.querySelector('.cta-buttons .btn-secondary');
+    if (quickEmailBtn) {
+        quickEmailBtn.addEventListener('click', function() {
+            window.location.href = 'mailto:Somasekhar.r@outlook.com?subject=Inquiry about QA Role';
+        });
+    }
     
     // Schedule Interview buttons
-    const scheduleButtons = document.querySelectorAll('button:contains("Schedule Interview")');
+    const scheduleButtons = document.querySelectorAll('.cta-buttons .btn-primary');
     scheduleButtons.forEach(button => {
         if (button.textContent.includes('Schedule Interview')) {
             button.addEventListener('click', function() {
-                // You can integrate with calendar booking services like Calendly
-                alert('Please email Somasekhar.r@outlook.com to schedule a technical interview.');
+                // This will open your Calendly link in a new tab
+                window.open('https://calendly.com/your-username', '_blank');
             });
         }
     });
