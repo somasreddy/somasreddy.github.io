@@ -30,50 +30,28 @@ function setRandomProfilePicture() {
     const randomImage = profilePictures[Math.floor(Math.random() * profilePictures.length)];
     profileImg.src = imagePath + randomImage;
 }
-// Navigation Active State Management
-document.addEventListener('DOMContentLoaded', function() {
+
+// Update active navigation link based on scroll position
+function updateActiveNav() {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section[id]');
+    const scrollPosition = window.scrollY + 100;
 
-    // Update active navigation link based on scroll position
-    function updateActiveNav() {
-        const scrollPosition = window.scrollY + 100;
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
 
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                navLinks.forEach((link) => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${sectionId}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    }
-
-    // Listen for scroll events
-    window.addEventListener('scroll', updateActiveNav);
-
-    // Smooth scrolling for navigation links
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            navLinks.forEach((link) => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${sectionId}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
     });
-});
+}
 
 // Smooth Scroll Function for Buttons
 function scrollToSection(sectionId) {
@@ -133,55 +111,6 @@ function toggleProject(button) {
     }
 }
 
-// Contact Form Handling
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contact-form');
-    const formSuccess = document.getElementById('form-success');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                company: formData.get('company'),
-                role: formData.get('role'),
-                message: formData.get('message')
-            };
-
-            // Validate required fields
-            if (!data.name || !data.email || !data.message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-
-            // Validate email format
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(data.email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-
-            // Simulate form submission
-            console.log('Form submitted with data:', data);
-            
-            // Show success message
-            contactForm.style.display = 'none';
-            formSuccess.style.display = 'block';
-            
-            // Hide success message and reset form after 3 seconds
-            setTimeout(() => {
-                formSuccess.style.display = 'none';
-                contactForm.style.display = 'block';
-                contactForm.reset();
-            }, 3000);
-        });
-    }
-});
-
 // Intersection Observer for Fade-in Animations
 function setupScrollAnimations() {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
@@ -202,59 +131,11 @@ function setupScrollAnimations() {
     });
 }
 
-// Add scroll animations to sections
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.classList.add('animate-on-scroll');
-    });
-    
-    setupScrollAnimations();
-    animateSkillBars();
-    setRandomProfilePicture();
-});
-
-// Navbar Background on Scroll
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 1px 3px 0 rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.9)';
-        navbar.style.boxShadow = 'none';
-    }
-});
-
-// Smooth scrolling for all internal links
-document.addEventListener('DOMContentLoaded', function() {
-    const internalLinks = document.querySelectorAll('a[href^="#"]');
-    
-    internalLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 80; // Account for fixed navbar
-                
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
-
 // Add typing animation to hero title
 function typeWriterEffect() {
     const heroTitle = document.querySelector('.hero-title');
     const text = heroTitle.textContent;
     heroTitle.textContent = '';
-    
     let i = 0;
     const timer = setInterval(() => {
         if (i < text.length) {
@@ -266,28 +147,20 @@ function typeWriterEffect() {
     }, 100);
 }
 
-// Initialize typing effect when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(typeWriterEffect, 500);
-});
-
 // Add loading animation for stats
 function animateStats() {
     const statValues = document.querySelectorAll('.stat-value');
-    
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const statElement = entry.target;
-                const finalValue = statElement.textContent;
+                const finalValue = statElement.textContent; // e.g., "70%" or "100+"
                 
-                // Extract number from text (e.g., "70%" -> 70)
+                // Extract number from text
                 const numericValue = parseInt(finalValue.replace(/\D/g, ''));
-                
                 if (!isNaN(numericValue)) {
                     let currentValue = 0;
                     const increment = numericValue / 30; // 30 steps for smooth animation
-                    
                     const timer = setInterval(() => {
                         currentValue += increment;
                         if (currentValue >= numericValue) {
@@ -295,125 +168,19 @@ function animateStats() {
                             clearInterval(timer);
                         } else {
                             const suffix = finalValue.replace(/\d/g, '');
-                            statElement.textContent = Math.floor(currentValue) + suffix;
+                            statElement.textContent = Math.round(currentValue) + suffix;
                         }
-                    }, 50);
+                    }, 20);
                 }
-                
                 observer.unobserve(statElement);
             }
         });
     }, { threshold: 0.5 });
     
-    statValues.forEach(stat => {
-        observer.observe(stat);
+    statValues.forEach(value => {
+        observer.observe(value);
     });
 }
-
-// Initialize stats animation
-document.addEventListener('DOMContentLoaded', function() {
-    animateStats();
-});
-
-// Mobile Menu Toggle (if you want to add mobile menu later)
-function toggleMobileMenu() {
-    const navMenu = document.querySelector('.nav-menu');
-    navMenu.classList.toggle('active');
-}
-
-// Add click handlers for CTA buttons
-document.addEventListener('DOMContentLoaded', function() {
-    // Select all buttons with the appropriate classes
-    const ctaButtons = document.querySelectorAll('.cta-buttons .btn');
-    
-    // Find the buttons by their text content
-    const quickEmailBtn = Array.from(ctaButtons).find(btn => btn.textContent.trim().includes('Quick Email'));
-    const scheduleInterviewBtn = Array.from(ctaButtons).find(btn => btn.textContent.trim().includes('Schedule Interview'));
-
-    // Quick Email Button
-    if (quickEmailBtn) {
-        quickEmailBtn.addEventListener('click', function() {
-            window.location.href = 'mailto:Somasekhar.r@outlook.com?subject=Inquiry about QA Role';
-        });
-    }
-    
-    // Schedule Interview Button
-    if (scheduleInterviewBtn) {
-        scheduleInterviewBtn.addEventListener('click', function() {
-            // This will open your Calendly link in a new tab
-            window.open('https://calendly.com/somasreddy', '_blank');
-        });
-    }
-});
-
-// Add scroll indicator animation
-document.addEventListener('DOMContentLoaded', function() {
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    
-    if (scrollIndicator) {
-        scrollIndicator.addEventListener('click', function() {
-            const aboutSection = document.getElementById('about');
-            if (aboutSection) {
-                aboutSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    }
-});
-
-// Performance optimization: Debounce scroll events
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Use debounced scroll handler for better performance
-const debouncedScrollHandler = debounce(() => {
-    updateActiveNav();
-}, 10);
-
-// Replace the existing scroll listener with debounced version
-window.addEventListener('scroll', debouncedScrollHandler);
-
-// Add intersection observer for better performance instead of scroll events
-const observerOptions = {
-    root: null,
-    rootMargin: '-50px 0px -50px 0px',
-    threshold: 0.1
-};
-
-const sectionObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const sectionId = entry.target.getAttribute('id');
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
-    });
-}, observerOptions);
-
-// Observe all sections for navigation updates
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section[id]');
-    sections.forEach(section => {
-        sectionObserver.observe(section);
-    });
-});
 
 // Add smooth reveal animations for project cards
 function setupProjectAnimations() {
@@ -440,21 +207,86 @@ function setupProjectAnimations() {
     });
 }
 
-// Initialize project animations
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Navigation Active State Management (moved from inside here)
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Contact Form Handling (Updated to use fetch)
+    const contactForm = document.getElementById('contact-form');
+    const formSuccess = document.getElementById('form-success');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formURL = contactForm.getAttribute('action');
+            if (!formURL) {
+                console.error('Formspree endpoint not found!');
+                return;
+            }
+
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch(formURL, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Show success message and reset form
+                    contactForm.style.display = 'none';
+                    formSuccess.style.display = 'block';
+                    setTimeout(() => {
+                        formSuccess.style.display = 'none';
+                        contactForm.style.display = 'block';
+                        contactForm.reset();
+                    }, 3000);
+                } else {
+                    alert('Oops! There was a problem submitting your form.');
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                alert('Oops! An error occurred.');
+            }
+        });
+    }
+
+    // Schedule Interview Button (Updated)
+    const scheduleButton = document.getElementById('schedule-interview-btn');
+    if (scheduleButton) {
+        scheduleButton.addEventListener('click', function() {
+            // As an HR, I expect to be taken directly to a scheduling tool.
+            window.open('https://calendly.com/somasreddy', '_blank');
+        });
+    }
+
+    // Initialize all functionality
+    setupScrollAnimations();
+    animateSkillBars();
+    setRandomProfilePicture();
+    animateStats();
     setupProjectAnimations();
+    typeWriterEffect();
 });
 
-// Console welcome message
-console.log(`
-%c🚀 Welcome to Somasekhar V's Portfolio! %c
-%cSenior QA Engineer | Automation Architect
-%c8+ Years of Quality Excellence
-%cContact: Somasekhar.r@outlook.com
-`, 
-'color: #2563eb; font-size: 16px; font-weight: bold;',
-'',
-'color: #059669; font-size: 14px;',
-'color: #7c3aed; font-size: 12px;',
-'color: #dc2626; font-size: 12px;'
-);
+// Listen for scroll events
+window.addEventListener('scroll', updateActiveNav);
