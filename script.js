@@ -289,4 +289,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Listen for scroll events
-window.addEventListener('scroll', updateActiveNav);
+window.addEventListener('scroll', () => {
+    updateActiveNav();
+    
+    // Toggle Nav Brand Visibility
+    const navBrand = document.querySelector('.nav-brand');
+    if (window.scrollY > 300) {
+        navBrand.classList.add('visible');
+    } else {
+        navBrand.classList.remove('visible');
+    }
+});
