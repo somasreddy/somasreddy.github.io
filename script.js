@@ -37,7 +37,7 @@ function setupSmoothLinks() {
 }
 
 function setupReveal() {
-    const items = document.querySelectorAll('.skill-card, .project-card, .architecture-panel');
+    const items = document.querySelectorAll('.skill-card, .project-card, .qa-architecture-visual');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {

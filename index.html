@@ -18,11 +18,14 @@
         <div class="nav-container">
             <a class="nav-brand" href="#hero">Somasekhar V</a>
             <div class="nav-menu" aria-label="Primary navigation">
-                <a href="#about" class="nav-link">Profile</a>
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Portfolio</a>
                 <a href="#projects" class="nav-link">Projects</a>
-                <a href="resume.html" class="nav-link">Resume</a>
-                <a href="#contact" class="nav-link nav-cta">Contact</a>
+                <a href="#skills" class="nav-link">Tech Stack</a>
+                <a href="#about" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
         </div>
     </nav>
@@ -31,59 +34,126 @@
         <section id="hero" class="hero-section">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <p class="section-kicker">Senior QA Automation Engineer | SDET | AI-Orchestrated Product Builder</p>
-                    <h1>Quality engineering leader building automation systems and AI-enabled products.</h1>
+                    <h1>Somasekhar V</h1>
+                    <p class="hero-role">Senior QA Automation Engineer <span>|</span><br>SDET <span>|</span> AI-Orchestrated Product Builder</p>
                     <p class="hero-description">
-                        I bring 9+ years across QA automation, Java, Selenium, QMetry/QAF, Rest Assured, TestNG, Newman, API validation,
-                        DMS workflows, and low-code enterprise platforms, with hands-on ownership of frameworks built from scratch and recent work orchestrating AI-assisted
-                        web products from concept to working implementation.
+                        I design intelligent test automation and quality frameworks that accelerate delivery,
+                        improve reliability, and elevate product experiences. I combine deep QA expertise with
+                        AI orchestration to build scalable systems and exceptional products.
                     </p>
                     <div class="hero-actions">
-                        <a class="btn btn-primary" href="#projects"><i data-lucide="layout-dashboard"></i> View Portfolio</a>
-                        <a class="btn btn-secondary" href="resume.html"><i data-lucide="file-text"></i> View Resume</a>
-                    </div>
-                    <div class="hero-contact" aria-label="Contact summary">
-                        <span><i data-lucide="map-pin"></i> Bengaluru, India</span>
-                        <a href="mailto:Somasekhar.r@outlook.com"><i data-lucide="mail"></i> Somasekhar.r@outlook.com</a>
-                        <a href="tel:+919008979099"><i data-lucide="phone"></i> +91-900 8979099</a>
+                        <a class="btn btn-primary" href="#projects"><i data-lucide="chevron-right"></i> View Portfolio</a>
+                        <a class="btn btn-secondary" href="resume.html"><i data-lucide="download"></i> Download Resume</a>
                     </div>
                 </div>
 
-                <div class="architecture-panel" aria-label="Quality engineering and AI orchestration visual">
-                    <div class="panel-topline">
-                        <span>QA Architecture Console</span>
-                        <span class="status-dot">Active</span>
+                <div class="qa-architecture-visual" aria-label="QA automation and AI orchestration architecture">
+                    <div class="visual-dots dots-a"></div>
+                    <div class="visual-dots dots-b"></div>
+
+                    <div class="client-box">
+                        <span>Clients</span>
+                        <div><i data-lucide="globe-2"></i><small>Web</small></div>
+                        <div><i data-lucide="smartphone"></i><small>Mobile</small></div>
+                        <div><i data-lucide="settings"></i><small>Services</small></div>
                     </div>
-                    <div class="pipeline-row">
-                        <div class="pipeline-step"><i data-lucide="git-branch"></i><span>Requirements</span></div>
-                        <div class="pipeline-step"><i data-lucide="braces"></i><span>API Gates</span></div>
-                        <div class="pipeline-step"><i data-lucide="bot"></i><span>AI Assist</span></div>
-                        <div class="pipeline-step"><i data-lucide="shield-check"></i><span>Release Quality</span></div>
+
+                    <div class="api-layer">
+                        <span class="diagram-title">API Layer</span>
+                        <div class="api-node center">API</div>
+                        <div class="api-node users">Users<br>API</div>
+                        <div class="api-node auth">Auth<br>API</div>
+                        <div class="api-node orders">Orders<br>API</div>
+                        <div class="api-node payments">Payments<br>API</div>
+                        <div class="api-node inventory">Inventory<br>API</div>
                     </div>
-                    <div class="console-grid">
-                        <div class="console-card wide">
-                            <span class="console-label">Primary Stack</span>
-                            <strong>Java + Selenium + QMetry/QAF + Rest Assured + TestNG + Newman</strong>
+
+                    <div class="pipeline-box">
+                        <span class="diagram-title">Test Orchestration Pipeline</span>
+                        <div class="pipeline-items">
+                            <div><i data-lucide="panel-top"></i><small>Test<br>Design</small></div>
+                            <div><i data-lucide="folder-sync"></i><small>Automation<br>Framework</small></div>
+                            <div><i data-lucide="scan-line"></i><small>Execution<br>Suites</small></div>
+                            <div><i data-lucide="chart-no-axes-column-increasing"></i><small>Results &<br>Reporting</small></div>
                         </div>
-                        <div class="console-card">
-                            <span class="console-label">API Assets</span>
-                            <strong>133+ presets</strong>
-                        </div>
-                        <div class="console-card">
-                            <span class="console-label">Portfolio</span>
-                            <strong>8 products</strong>
-                        </div>
-                        <div class="console-card wide code-card">
-                            <code>orchestrate(qa_strategy, ai_tools, product_delivery)</code>
-                        </div>
+                    </div>
+
+                    <div class="assistant-box">
+                        <strong><i data-lucide="sparkles"></i> AI Assistant</strong>
+                        <span><i data-lucide="wand-sparkles"></i> Test Case Generation</span>
+                        <span><i data-lucide="network"></i> Impact Analysis</span>
+                        <span><i data-lucide="bug"></i> Defect Triage</span>
+                        <span><i data-lucide="map-pin"></i> Root Cause Suggestions</span>
+                        <span><i data-lucide="brain-circuit"></i> Smart Prioritization</span>
+                    </div>
+
+                    <div class="insights-box">
+                        <span class="diagram-title">Quality Insights</span>
+                        <div><i data-lucide="bar-chart-3"></i><small>Trends</small></div>
+                        <div><i data-lucide="triangle-alert"></i><small>Failures</small></div>
+                        <div><i data-lucide="shield"></i><small>Coverage</small></div>
+                        <div><i data-lucide="target"></i><small>Risk Areas</small></div>
+                    </div>
+
+                    <div class="code-card test-code">
+                        <div>Test (Playwright)<span>TS</span></div>
+                        <pre>test('user can place order', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button',
+    { name: 'Add to cart' }).click();
+  await expect(page.getByText('Order
+  placed')).toBeVisible();
+});</pre>
+                    </div>
+
+                    <div class="code-card api-code">
+                        <div>API Test (Rest Assured)<span>Java</span></div>
+                        <pre>given()
+  .baseUri(BASE_URI)
+  .when().get('/api/orders')
+  .then()
+    .statusCode(200)
+    .body('orders', not(empty()));</pre>
+                    </div>
+
+                    <div class="ci-card">
+                        <strong>CI/CD Integration</strong>
+                        <span><i data-lucide="github"></i> GitHub Actions</span>
+                        <span><i data-lucide="hard-hat"></i> Jenkins</span>
+                        <span><i data-lucide="container"></i> Docker</span>
+                        <span><i data-lucide="badge-check"></i> Allure Reports</span>
                     </div>
                 </div>
             </div>
             <div class="capability-strip">
-                <span>Automation Architecture</span>
-                <span>API & DMS Validation</span>
-                <span>AI Product Orchestration</span>
-                <span>Modern Web Delivery</span>
+                <article>
+                    <i data-lucide="badge-check"></i>
+                    <div>
+                        <h3>QA Automation</h3>
+                        <p>Build robust, maintainable automation frameworks using Playwright, Selenium, Cypress and TestNG with a focus on reliability and speed.</p>
+                    </div>
+                </article>
+                <article>
+                    <i data-lucide="cloud"></i>
+                    <div>
+                        <h3>API Testing</h3>
+                        <p>Design and automate API tests with Rest Assured, Postman, and contract testing to ensure secure, performant, and reliable services.</p>
+                    </div>
+                </article>
+                <article>
+                    <i data-lucide="brain-circuit"></i>
+                    <div>
+                        <h3>AI Product Orchestration</h3>
+                        <p>Leverage AI to generate tests, analyze impacts, triage defects, and orchestrate quality workflows that drive smarter, faster decisions.</p>
+                    </div>
+                </article>
+                <article>
+                    <i data-lucide="briefcase-business"></i>
+                    <div>
+                        <h3>Product Portfolio</h3>
+                        <p>Engineer end-to-end products and internal tools that solve real-world problems and deliver measurable value.</p>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -327,7 +397,7 @@
 
     <footer class="footer">
         <div class="container footer-inner">
-            <span>© 2026 Somasekhar V</span>
+            <span>&copy; 2026 Somasekhar V</span>
             <span>Senior QA Automation Engineer | SDET | AI Product Builder</span>
         </div>
     </footer>
