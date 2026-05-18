@@ -18,11 +18,14 @@
         <div class="nav-container">
             <a class="nav-brand" href="#hero">Somasekhar V</a>
             <div class="nav-menu" aria-label="Primary navigation">
-                <a href="#about" class="nav-link">Profile</a>
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
                 <a href="#projects" class="nav-link">Projects</a>
-                <a href="resume.html" class="nav-link">Resume</a>
-                <a href="#contact" class="nav-link nav-cta">Contact</a>
+                <a href="#tech-stack" class="nav-link">Tech Stack</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
         </div>
     </nav>
@@ -31,59 +34,136 @@
         <section id="hero" class="hero-section">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <p class="section-kicker">Senior QA Automation Engineer | SDET | AI-Orchestrated Product Builder</p>
-                    <h1>Quality engineering leader building automation systems and AI-enabled products.</h1>
+                    <h1 class="hero-name">Somasekhar V</h1>
+                    <h2 class="hero-role">Senior QA Automation Engineer <span class="role-pipe">|</span><br> SDET <span class="role-pipe">|</span> AI-Orchestrated Product Builder</h2>
                     <p class="hero-description">
-                        I bring 9+ years across QA automation, Java, Selenium, Rest Assured, TestNG, Newman, API validation,
-                        DMS workflows, and low-code enterprise platforms, with recent hands-on work orchestrating AI-assisted
-                        web products from concept to working implementation.
+                        I design intelligent test automation and quality frameworks that accelerate delivery, improve reliability, and elevate product experiences. I combine deep QA expertise with AI orchestration to build scalable systems and exceptional products.
                     </p>
                     <div class="hero-actions">
-                        <a class="btn btn-primary" href="#projects"><i data-lucide="layout-dashboard"></i> View Portfolio</a>
-                        <a class="btn btn-secondary" href="resume.html"><i data-lucide="file-text"></i> View Resume</a>
-                    </div>
-                    <div class="hero-contact" aria-label="Contact summary">
-                        <span><i data-lucide="map-pin"></i> Bengaluru, India</span>
-                        <a href="mailto:Somasekhar.r@outlook.com"><i data-lucide="mail"></i> Somasekhar.r@outlook.com</a>
-                        <a href="tel:+919008979099"><i data-lucide="phone"></i> +91-900 8979099</a>
+                        <a class="btn btn-primary" href="#projects"><i data-lucide="chevron-right"></i> View Portfolio</a>
+                        <a class="btn-outline" href="resume.html"><i data-lucide="download"></i> Download Resume</a>
                     </div>
                 </div>
 
-                <div class="architecture-panel" aria-label="Quality engineering and AI orchestration visual">
-                    <div class="panel-topline">
-                        <span>QA Architecture Console</span>
-                        <span class="status-dot">Active</span>
+                <div class="architecture-diagram">
+                    <div class="diagram-top">
+                        <!-- Clients -->
+                        <div class="diag-box clients">
+                            <div class="box-label">Clients</div>
+                            <div class="client-icons">
+                                <div><i data-lucide="globe"></i><span>Web</span></div>
+                                <div><i data-lucide="smartphone"></i><span>Mobile</span></div>
+                                <div><i data-lucide="settings"></i><span>Services</span></div>
+                            </div>
+                        </div>
+
+                        <!-- API Layer -->
+                        <div class="diag-box api-layer">
+                            <div class="box-label">API Layer</div>
+                            <div class="api-hex">API</div>
+                            <div class="api-satellite sat-1">Users<br>API</div>
+                            <div class="api-satellite sat-2">Auth<br>API</div>
+                            <div class="api-satellite sat-3">Orders<br>API</div>
+                            <div class="api-satellite sat-4">Payments<br>API</div>
+                            <div class="api-satellite sat-5">Inventory<br>API</div>
+                        </div>
+
+                        <!-- Pipeline Group -->
+                        <div class="pipeline-group">
+                            <div class="diag-box pipeline">
+                                <div class="box-label">Test Orchestration Pipeline</div>
+                                <div class="pipeline-steps">
+                                    <div class="p-step"><i data-lucide="file-code-2"></i><span>Test<br>Design</span></div>
+                                    <div class="p-arrow">&rarr;</div>
+                                    <div class="p-step"><i data-lucide="code-2"></i><span>Automation<br>Framework</span></div>
+                                    <div class="p-arrow">&rarr;</div>
+                                    <div class="p-step"><i data-lucide="cpu"></i><span>Execution<br>(Suites)</span></div>
+                                    <div class="p-arrow">&rarr;</div>
+                                    <div class="p-step"><i data-lucide="bar-chart-3"></i><span>Results &<br>Reporting</span></div>
+                                </div>
+                                
+                                <div class="diag-box quality-insights">
+                                    <div class="box-label">Quality Insights</div>
+                                    <div class="insights-icons">
+                                        <div><i data-lucide="trending-up"></i><span>Trends</span></div>
+                                        <div><i data-lucide="alert-triangle"></i><span>Failures</span></div>
+                                        <div><i data-lucide="target"></i><span>Coverage</span></div>
+                                        <div><i data-lucide="radar"></i><span>Risk Areas</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AI Assistant -->
+                        <div class="diag-box ai-assistant">
+                            <div class="ai-header"><i data-lucide="sparkles"></i> AI Assistant</div>
+                            <div class="ai-list">
+                                <div><i data-lucide="test-tube-2"></i> Test Case Generation</div>
+                                <div><i data-lucide="network"></i> Impact Analysis</div>
+                                <div><i data-lucide="shield-alert"></i> Defect Triage</div>
+                                <div><i data-lucide="lightbulb"></i> Root Cause Suggestions</div>
+                                <div><i data-lucide="arrow-up-right"></i> Smart Prioritization</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="pipeline-row">
-                        <div class="pipeline-step"><i data-lucide="git-branch"></i><span>Requirements</span></div>
-                        <div class="pipeline-step"><i data-lucide="braces"></i><span>API Gates</span></div>
-                        <div class="pipeline-step"><i data-lucide="bot"></i><span>AI Assist</span></div>
-                        <div class="pipeline-step"><i data-lucide="shield-check"></i><span>Release Quality</span></div>
-                    </div>
-                    <div class="console-grid">
-                        <div class="console-card wide">
-                            <span class="console-label">Primary Stack</span>
-                            <strong>Java + Selenium + Rest Assured + TestNG + Newman</strong>
+
+                    <div class="diagram-bottom">
+                        <!-- Code snippets -->
+                        <div class="code-snippet-box">
+                            <div class="snippet-header"><span>Test (Playwright)</span><span class="badge badge-ts">TS</span></div>
+                            <pre><code>test('user can place order', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', 
+    { name: 'Add to cart' }).click();
+  await expect(page.getByText('Order 
+  placed')).toBeVisible();
+});</code></pre>
                         </div>
-                        <div class="console-card">
-                            <span class="console-label">API Assets</span>
-                            <strong>133+ presets</strong>
+                        
+                        <div class="code-snippet-box">
+                            <div class="snippet-header"><span>API Test (Rest Assured)</span><span class="badge badge-java"><i data-lucide="coffee"></i></span></div>
+                            <pre><code>given()
+  .baseUri(BASE_URI)
+  .when().get('/api/orders')
+  .then()
+  .statusCode(200)
+  .body('orders', not(empty()));</code></pre>
                         </div>
-                        <div class="console-card">
-                            <span class="console-label">Portfolio</span>
-                            <strong>8 products</strong>
-                        </div>
-                        <div class="console-card wide code-card">
-                            <code>orchestrate(qa_strategy, ai_tools, product_delivery)</code>
+
+                        <div class="code-snippet-box cicd-integration">
+                            <div class="snippet-header"><span>CI/CD Integration</span><i data-lucide="infinity"></i></div>
+                            <div class="cicd-items">
+                                <div><i data-lucide="github"></i> GitHub Actions</div>
+                                <div><i data-lucide="server-cog"></i> Jenkins</div>
+                                <div><i data-lucide="box"></i> Docker</div>
+                                <div><i data-lucide="pie-chart"></i> Allure Reports</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="capability-strip">
-                <span>Automation Architecture</span>
-                <span>API & DMS Validation</span>
-                <span>AI Product Orchestration</span>
-                <span>Modern Web Delivery</span>
+            
+            <div class="container features-4col">
+                <div class="feature-col">
+                    <div class="f-icon"><i data-lucide="settings-2"></i><span class="f-badge check-badge"><i data-lucide="check"></i></span></div>
+                    <h3>QA Automation</h3>
+                    <p>Build robust, maintainable automation frameworks using Playwright, Selenium, Cypress and TestNG with a focus on reliability and speed.</p>
+                </div>
+                <div class="feature-col">
+                    <div class="f-icon"><i data-lucide="cloud"></i><span class="f-badge api-badge">API</span></div>
+                    <h3>API Testing</h3>
+                    <p>Design and automate API tests with Rest Assured, Postman, and contract testing to ensure secure, performant, and reliable services.</p>
+                </div>
+                <div class="feature-col">
+                    <div class="f-icon"><i data-lucide="brain-circuit"></i></div>
+                    <h3>AI Product Orchestration</h3>
+                    <p>Leverage AI to generate tests, analyze impacts, triage defects, and orchestrate quality workflows that drive smarter, faster decisions.</p>
+                </div>
+                <div class="feature-col">
+                    <div class="f-icon"><i data-lucide="briefcase"></i></div>
+                    <h3>Product Portfolio</h3>
+                    <p>Engineer end-to-end products and internal tools that solve real-world problems and deliver measurable value.</p>
+                </div>
             </div>
         </section>
 
