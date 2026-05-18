@@ -45,99 +45,38 @@
                     </div>
                 </div>
 
-                <div class="architecture-diagram">
-                    <div class="diagram-top">
-                        <!-- Clients -->
-                        <div class="diag-box clients">
-                            <div class="box-label">Clients</div>
-                            <div class="client-icons">
-                                <div><i data-lucide="globe"></i><span>Web</span></div>
-                                <div><i data-lucide="smartphone"></i><span>Mobile</span></div>
-                                <div><i data-lucide="settings"></i><span>Services</span></div>
-                            </div>
+                <div class="hero-visual">
+                    <div class="glass-panel main-pipeline">
+                        <div class="panel-header">
+                            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                            <span class="panel-title">Quality_Orchestration.ts</span>
                         </div>
-
-                        <!-- API Layer -->
-                        <div class="diag-box api-layer">
-                            <div class="box-label">API Layer</div>
-                            <div class="api-hex">API</div>
-                            <div class="api-satellite sat-1">Users<br>API</div>
-                            <div class="api-satellite sat-2">Auth<br>API</div>
-                            <div class="api-satellite sat-3">Orders<br>API</div>
-                            <div class="api-satellite sat-4">Payments<br>API</div>
-                            <div class="api-satellite sat-5">Inventory<br>API</div>
-                        </div>
-
-                        <!-- Pipeline Group -->
-                        <div class="pipeline-group">
-                            <div class="diag-box pipeline">
-                                <div class="box-label">Test Orchestration Pipeline</div>
-                                <div class="pipeline-steps">
-                                    <div class="p-step"><i data-lucide="file-code-2"></i><span>Test<br>Design</span></div>
-                                    <div class="p-arrow">&rarr;</div>
-                                    <div class="p-step"><i data-lucide="code-2"></i><span>Automation<br>Framework</span></div>
-                                    <div class="p-arrow">&rarr;</div>
-                                    <div class="p-step"><i data-lucide="cpu"></i><span>Execution<br>(Suites)</span></div>
-                                    <div class="p-arrow">&rarr;</div>
-                                    <div class="p-step"><i data-lucide="bar-chart-3"></i><span>Results &<br>Reporting</span></div>
-                                </div>
-                                
-                                <div class="diag-box quality-insights">
-                                    <div class="box-label">Quality Insights</div>
-                                    <div class="insights-icons">
-                                        <div><i data-lucide="trending-up"></i><span>Trends</span></div>
-                                        <div><i data-lucide="alert-triangle"></i><span>Failures</span></div>
-                                        <div><i data-lucide="target"></i><span>Coverage</span></div>
-                                        <div><i data-lucide="radar"></i><span>Risk Areas</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- AI Assistant -->
-                        <div class="diag-box ai-assistant">
-                            <div class="ai-header"><i data-lucide="sparkles"></i> AI Assistant</div>
-                            <div class="ai-list">
-                                <div><i data-lucide="test-tube-2"></i> Test Case Generation</div>
-                                <div><i data-lucide="network"></i> Impact Analysis</div>
-                                <div><i data-lucide="shield-alert"></i> Defect Triage</div>
-                                <div><i data-lucide="lightbulb"></i> Root Cause Suggestions</div>
-                                <div><i data-lucide="arrow-up-right"></i> Smart Prioritization</div>
-                            </div>
+                        <div class="panel-body">
+                            <div class="code-line"><span class="keyword">import</span> { <span class="variable">AI</span>, <span class="variable">Automation</span> } <span class="keyword">from</span> <span class="string">'@somasekhar/core'</span>;</div>
+                            <div class="code-line"><br></div>
+                            <div class="code-line"><span class="keyword">const</span> <span class="variable">pipeline</span> = <span class="keyword">new</span> <span class="class">AutomationPipeline</span>({</div>
+                            <div class="code-line indent">  engine: <span class="string">'Playwright & RestAssured'</span>,</div>
+                            <div class="code-line indent">  ai_assistant: <span class="boolean">true</span>,</div>
+                            <div class="code-line indent">  coverage: <span class="string">'E2E + API'</span></div>
+                            <div class="code-line">});</div>
+                            <div class="code-line"><br></div>
+                            <div class="code-line"><span class="keyword">await</span> pipeline.<span class="method">execute</span>();</div>
                         </div>
                     </div>
 
-                    <div class="diagram-bottom">
-                        <!-- Code snippets -->
-                        <div class="code-snippet-box">
-                            <div class="snippet-header"><span>Test (Playwright)</span><span class="badge badge-ts">TS</span></div>
-                            <pre><code>test('user can place order', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button', 
-    { name: 'Add to cart' }).click();
-  await expect(page.getByText('Order 
-  placed')).toBeVisible();
-});</code></pre>
+                    <div class="glass-panel floating-card ai-card">
+                        <div class="f-icon-glow"><i data-lucide="sparkles"></i></div>
+                        <div class="f-text">
+                            <h4>AI Test Generation</h4>
+                            <p>Automated impact analysis & triage</p>
                         </div>
-                        
-                        <div class="code-snippet-box">
-                            <div class="snippet-header"><span>API Test (Rest Assured)</span><span class="badge badge-java"><i data-lucide="coffee"></i></span></div>
-                            <pre><code>given()
-  .baseUri(BASE_URI)
-  .when().get('/api/orders')
-  .then()
-  .statusCode(200)
-  .body('orders', not(empty()));</code></pre>
-                        </div>
+                    </div>
 
-                        <div class="code-snippet-box cicd-integration">
-                            <div class="snippet-header"><span>CI/CD Integration</span><i data-lucide="infinity"></i></div>
-                            <div class="cicd-items">
-                                <div><i data-lucide="github"></i> GitHub Actions</div>
-                                <div><i data-lucide="server-cog"></i> Jenkins</div>
-                                <div><i data-lucide="box"></i> Docker</div>
-                                <div><i data-lucide="pie-chart"></i> Allure Reports</div>
-                            </div>
+                    <div class="glass-panel floating-card api-card">
+                        <div class="f-icon-glow blue"><i data-lucide="network"></i></div>
+                        <div class="f-text">
+                            <h4>API Validation</h4>
+                            <p>Microservices & Cloud workflows</p>
                         </div>
                     </div>
                 </div>
@@ -255,6 +194,30 @@
                         </div>
                         <p>Postman/Newman DMS upload suite with collection/environment execution, iteration CSVs, HTML/CSV reporting, Unicode/no-extension files, 10 MB to 1 GB boundaries, blocked executables, MIME spoofing, corrupted archives, and zip-bomb cases.</p>
                         <div class="tag-row"><span>Newman</span><span>Postman</span><span>DMS</span></div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-heading">
+                            <i data-lucide="test-tube-2"></i>
+                            <div>
+                                <h3>ECAP QA Framework (QMetry)</h3>
+                                <p>AgileApps / Core System Testing</p>
+                            </div>
+                        </div>
+                        <p>Built from scratch using Java 11, TestNG, Cucumber BDD, and Selenium WebDriver. Designed custom reporting dashboard, implemented SikuliX for image interactions, and developed robust data-driven Excel/JSON suites for end-to-end AgileApps validation.</p>
+                        <div class="tag-row"><span>Java 11</span><span>Selenium</span><span>Cucumber BDD</span></div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-heading">
+                            <i data-lucide="network"></i>
+                            <div>
+                                <h3>ECAP Rest-Assured API</h3>
+                                <p>Microservices Validation Suite</p>
+                            </div>
+                        </div>
+                        <p>Architected native TestNG + Rest-Assured (Java 21) API framework from scratch. Integrated Allure/Extent reports, dynamic JSON/WireMock data handling, and custom JsonReporterListener for structural test result bridging.</p>
+                        <div class="tag-row"><span>Java 21</span><span>Rest-Assured</span><span>TestNG</span></div>
                     </article>
 
                     <article class="project-card">
