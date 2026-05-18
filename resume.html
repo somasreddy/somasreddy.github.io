@@ -4,277 +4,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somasekhar V - Resume</title>
+    <meta name="description" content="Somasekhar V resume - Senior QA Automation Engineer, SDET, AI product builder.">
+    <title>Somasekhar V | Resume</title>
     <style>
-        /* Base Styles for Screen */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: #fdfdfd;
+        :root {
+            --ink: #172033;
+            --muted: #53657a;
+            --line: #cfd8e3;
+            --teal: #0f766e;
+            --navy: #0b1f3a;
         }
 
-        h1,
-        h2,
-        h3 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            color: var(--ink);
+            font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+            line-height: 1.48;
+            margin: 0 auto;
+            max-width: 920px;
+            padding: 38px;
+        }
+
+        header {
+            border-bottom: 3px solid var(--navy);
+            padding-bottom: 18px;
         }
 
         h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.2rem;
+            color: var(--navy);
+            font-size: 2.25rem;
+            letter-spacing: 0;
+            line-height: 1;
+            margin: 0 0 8px;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: #555;
-            font-weight: 500;
-            margin-bottom: 1rem;
+        .headline {
+            color: var(--teal);
+            font-size: 1.05rem;
+            font-weight: 800;
+            margin-bottom: 10px;
         }
 
-        .contact-info {
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 1rem;
+        .contact {
+            color: var(--muted);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 14px;
+            font-size: 0.92rem;
         }
 
-        .contact-info a {
-            color: #333;
+        .contact a {
+            color: var(--muted);
             text-decoration: none;
-            margin-right: 1rem;
         }
 
         section {
-            margin-bottom: 2rem;
+            margin-top: 24px;
         }
 
         h2 {
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 0.3rem;
-            font-size: 1.3rem;
-            margin-top: 1.5rem;
+            border-bottom: 1px solid var(--line);
+            color: var(--navy);
+            font-size: 1rem;
+            letter-spacing: 0.08em;
+            margin: 0 0 10px;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            color: var(--ink);
+            font-size: 1rem;
+            margin: 14px 0 2px;
+        }
+
+        p {
+            margin: 0 0 10px;
         }
 
         ul {
-            list-style-type: square;
-            padding-left: 1.2rem;
-            margin-top: 0.5rem;
+            margin: 7px 0 0 20px;
+            padding: 0;
         }
 
         li {
-            margin-bottom: 0.3rem;
+            margin-bottom: 5px;
         }
 
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-top: 1rem;
-        }
-
-        .job-title {
-            font-weight: bold;
-            font-size: 1.05rem;
-        }
-
-        .company {
-            font-style: italic;
-        }
-
-        .date {
-            font-size: 0.9rem;
-            color: #666;
+        .summary {
+            color: var(--muted);
+            font-size: 0.98rem;
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 0.5rem;
+            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
         }
 
-        .skill-category {
-            font-weight: bold;
-            margin-right: 0.5rem;
+        .skill-line {
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 9px 10px;
         }
 
-        /* Print Optimization */
+        .skill-line strong {
+            color: var(--navy);
+        }
+
+        .job-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .date {
+            color: var(--muted);
+            flex: 0 0 auto;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .project-title {
+            color: var(--navy);
+            font-weight: 800;
+        }
+
         @media print {
             body {
-                width: 100%;
-                margin: 0;
+                max-width: none;
                 padding: 0;
-                font-size: 11pt;
-                /* Standard print size */
-                color: #000;
-                background: #fff;
+                font-size: 10.5pt;
+            }
+
+            section {
+                break-inside: avoid;
+                margin-top: 16px;
             }
 
             a {
-                text-decoration: none;
                 color: #000;
             }
 
-            .no-print {
-                display: none;
-            }
-
-            h2 {
-                border-bottom: 1px solid #000;
-            }
-
             @page {
-                margin: 0.75in;
+                margin: 0.55in;
+            }
+        }
+
+        @media (max-width: 720px) {
+            body {
+                padding: 24px;
+            }
+
+            .skills-grid,
+            .job-head {
+                display: block;
             }
         }
     </style>
 </head>
 
 <body>
-
     <header>
         <h1>Somasekhar V</h1>
-        <div class="subtitle">Senior QA Automation Engineer | SDET | Application Security Specialist</div>
-        <div class="contact-info">
-            <span>Bengaluru, India</span> |
-            <a href="mailto:Somasekhar.r@outlook.com">Somasekhar.r@outlook.com</a> |
-            <a href="tel:+919008979099">+91-900 8979099</a> |
-            <a href="https://www.linkedin.com/in/somasreddy/" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/somasreddy" target="_blank">GitHub</a>
+        <div class="headline">Senior QA Automation Engineer | SDET | AI-Orchestrated Product Builder</div>
+        <div class="contact">
+            <span>Bengaluru, India</span>
+            <a href="mailto:Somasekhar.r@outlook.com">Somasekhar.r@outlook.com</a>
+            <a href="tel:+919008979099">+91-900 8979099</a>
+            <a href="https://www.linkedin.com/in/somasreddy/">LinkedIn</a>
+            <a href="https://github.com/somasreddy">GitHub</a>
         </div>
     </header>
 
     <section>
         <h2>Professional Summary</h2>
-        <p>
-            Results-oriented <strong>Senior QA Automation Engineer</strong> & <strong>SDET</strong> with over <strong>8+
-                years</strong> of experience architecting scalable <strong>Test Automation Frameworks</strong> for
-            enterprise-grade applications.
-            Deep expertise in <strong>Java</strong>, <strong>Selenium</strong>, <strong>API Testing (Rest
-                Assured)</strong>, and <strong>CI/CD Pipeline Integration</strong> (Jenkins/Docker).
-            Proven leader in <strong>Shift-Left Testing</strong> methodologies and <strong>Agile/Scrum</strong>
-            environments, driving <strong>Quality Assurance</strong> strategy from requirement analysis to production
-            deployment.
-            Specialized in <strong>Application Security Testing (DAST/SAST)</strong> using <strong>Burp Suite</strong>
-            and currently pioneering <strong>AI-Driven Engineering</strong> (Vibe Coding, MCPs) to reduce regression
-            cycles by <strong>70%</strong> and optimize <strong>ROI</strong>.
+        <p class="summary">
+            Senior QA Automation Engineer and SDET with 9+ years of experience across Java, Selenium WebDriver,
+            Rest Assured, TestNG, Cucumber BDD, Postman/Newman, API validation, DMS workflows, desktop automation,
+            CI/CD, Agile delivery, and enterprise low-code platform testing. Recently expanded into AI-assisted product
+            orchestration, using modern AI tools to plan, generate, refine, and validate working web products while
+            applying senior QA judgment to usability, correctness, maintainability, and release readiness.
         </p>
     </section>
 
     <section>
-        <h2>Technical Core Competencies</h2>
+        <h2>Technical Skills</h2>
         <div class="skills-grid">
-            <div><span class="skill-category">Automation Frameworks:</span> Selenium WebDriver, Playwright, Cucumber
-                (BDD/TDD), Eggplant Functional (Image-Based), TestNG, Hybrid Design.</div>
-            <div><span class="skill-category">API & Backend:</span> Rest Assured, Postman, Microservices Testing,
-                JSON/XML Parsing, SQL/MySQL Database Validation.</div>
-            <div><span class="skill-category">DevOps & CI/CD:</span> Jenkins, Docker, Git/GitHub, Maven, AWS CodeBuild,
-                Continuous Integration, Continuous Deployment.</div>
-            <div><span class="skill-category">Security & Performance:</span> OWASP Top 10, Burp Suite Pro, JMeter, Load
-                Testing, Vulnerability Assessment.</div>
-            <div><span class="skill-category">Programming:</span> Java (Core/Advanced), Python, JavaScript (ES6+), Shell
-                Scripting.</div>
+            <div class="skill-line"><strong>Automation:</strong> Selenium WebDriver, TestNG, Cucumber BDD, POM, hybrid frameworks, Playwright exposure.</div>
+            <div class="skill-line"><strong>API Testing:</strong> Rest Assured, Postman, Newman, JSON/XML, API collections, DMS validation.</div>
+            <div class="skill-line"><strong>Languages:</strong> Java, JavaScript, Python basics, SQL/MySQL, HTML, CSS.</div>
+            <div class="skill-line"><strong>Delivery:</strong> Jenkins, Maven, Git/GitHub, Jira, QMetry, Agile/Scrum, Docker basics.</div>
+            <div class="skill-line"><strong>Testing:</strong> Functional, regression, smoke, sanity, desktop, data validation, low-code workflows.</div>
+            <div class="skill-line"><strong>AI/Product:</strong> Prompt engineering, AI-assisted coding, workflow decomposition, product QA, UI/UX review.</div>
         </div>
     </section>
 
     <section>
-        <h2>Professional Experience</h2>
-
-        <div class="job">
-            <div class="job-header">
-                <div>
-                    <span class="job-title">Senior QA Automation Engineer</span> - <span class="company">Escriba IG
-                        Tech</span>
-                </div>
-                <span class="date">Oct 2022 - Present</span>
-            </div>
-            <ul>
-                <li><strong>Strategic Leadership:</strong> Spearheading the enterprise QA strategy, transitioning manual
-                    test workflows to fully automated <strong>CI/CD pipelines</strong>, achieving a <strong>40%
-                        reduction</strong> in time-to-market.</li>
-                <li><strong>Automation Architecture:</strong> Designed and implemented a robust <strong>Hybrid Test
-                        Framework</strong> using Selenium & Java, enabling parallel execution and cross-browser
-                    compatibility testing.</li>
-                <li><strong>AI Innovation:</strong> Integration of AI-driven testing agents (MCPs) to generate test data
-                    and self-healing scripts, positioning the team at the forefront of <strong>Intelligent Quality
-                        Engineering</strong>.</li>
-                <li><strong>Security Compliance:</strong> Conducting regular <strong>Penetration Testing</strong> and
-                    vulnerability scans using <strong>Burp Suite</strong> to ensure GDPR compliance and data integrity.
-                </li>
-            </ul>
+        <h2>Experience</h2>
+        <div class="job-head">
+            <h3>Senior QA Automation Engineer - Escriba IG Tech</h3>
+            <span class="date">Oct 2022 - Present</span>
         </div>
+        <ul>
+            <li>Validate enterprise low-code/no-code platform capabilities covering business rules, process modeling, role-based access, DMS workflows, and configurable application behavior.</li>
+            <li>Design and execute automation strategies using Java, Selenium, Rest Assured, TestNG, Postman/Newman, and CI-friendly validation patterns.</li>
+            <li>Strengthen API and document workflow confidence through reusable collections, data-driven checks, and structured reporting.</li>
+            <li>Use AI-assisted engineering to accelerate product prototyping, test thinking, documentation, and implementation review.</li>
+        </ul>
+
+        <div class="job-head">
+            <h3>QA Automation Engineer - Cerner Healthcare</h3>
+            <span class="date">Aug 2018 - Oct 2022</span>
+        </div>
+        <ul>
+            <li>Automated and validated healthcare application workflows using desktop and backend testing approaches.</li>
+            <li>Supported regression, API, database, and release validation for critical clinical workflows.</li>
+            <li>Collaborated with cross-functional teams to investigate defects, clarify requirements, and improve test coverage.</li>
+        </ul>
+
+        <div class="job-head">
+            <h3>QA Engineer - Clonect Solutions</h3>
+            <span class="date">Jan 2017 - Aug 2018</span>
+        </div>
+        <ul>
+            <li>Performed functional, regression, and performance-oriented validation for GST application workflows.</li>
+            <li>Built Selenium/TestNG automation coverage for repeatable business-critical scenarios.</li>
+        </ul>
     </section>
 
     <section>
-        <h2>Key Projects & Impact</h2>
-
-        <div class="project">
-            <div class="job-header">
-                <span class="job-title">Enterprise Low-Code Platform Validation (Ecap/AgileApps)</span>
-            </div>
-            <ul>
-                <li><strong>Challenge:</strong> High regression effort for a complex low-code platform with 100+
-                    microservices and frequent release cycles.</li>
-                <li><strong>Solution:</strong> Developed a comprehensive validation engine using <strong>Rest
-                        Assured</strong> for API gates and <strong>Selenium</strong> for UI flows.</li>
-                <li><strong>Impact:</strong> Reduced regression testing cycles by <strong>70%</strong> and ensured
-                    <strong>99.5% uptime</strong> in production.</li>
-                <li><strong>Tech Stack:</strong> Java, Rest Assured, Selenium, BPMN.</li>
-            </ul>
-        </div>
-
-        <div class="project">
-            <div class="job-header">
-                <span class="job-title">Hybrid Automation Framework</span>
-            </div>
-            <ul>
-                <li><strong>Challenge:</strong> Fragmented test scripts leading to high maintenance costs and flaky
-                    tests.</li>
-                <li><strong>Solution:</strong> Architected a scalable Hybrid Framework (Keyword + Data Driven) using
-                    Cucumber BDD.</li>
-                <li><strong>Impact:</strong> Achieved <strong>85% test coverage</strong> and saved approximately
-                    <strong>$200k/year</strong> in manual testing efforts.</li>
-                <li><strong>Tech Stack:</strong> TestNG, Maven, Jenkins.</li>
-            </ul>
-        </div>
-
-        <div class="project">
-            <div class="job-header">
-                <span class="job-title">Clinical Assessments (Desktop Automation)</span>
-            </div>
-            <ul>
-                <li><strong>Challenge:</strong> Validating critical healthcare workflows on legacy Desktop applications
-                    where object recognition was difficult.</li>
-                <li><strong>Solution:</strong> Implemented <strong>Eggplant Functional</strong> (Image-Based Automation)
-                    for end-to-end desktop flows and performed basic API validation.</li>
-                <li><strong>Impact:</strong> Prevented <strong>15+ critical bugs</strong> per quarter and reduced
-                    testing cycle to <strong>2 days</strong>.</li>
-                <li><strong>Tech Stack:</strong> Eggplant Functional, Java, MySQL.</li>
-            </ul>
-        </div>
-
-        <div class="project">
-            <div class="job-header">
-                <span class="job-title">GST Star App Automation & Performance</span>
-            </div>
-            <ul>
-                <li><strong>Challenge:</strong> Manual regression testing for GST filing workflows was time-consuming
-                    and error-prone.</li>
-                <li><strong>Solution:</strong> Built a reliable <strong>Selenium Automation Suite</strong> for
-                    functional regression and conducted <strong>Basic Performance Testing</strong> using JMeter.</li>
-                <li><strong>Impact:</strong> Automated <strong>90%</strong> of manual test cases and established stable
-                    performance baselines for critical APIs.</li>
-                <li><strong>Tech Stack:</strong> Selenium WebDriver, Java, TestNG, JMeter (Basic).</li>
-            </ul>
-        </div>
+        <h2>Selected Projects</h2>
+        <p><span class="project-title">Code Generation Studio:</span> AI-assisted platform for generating API test assets, scripts, and workflow outputs with QA review built into the delivery process.</p>
+        <p><span class="project-title">Newman DMS Automation:</span> Postman/Newman automation for enterprise document upload and API validation flows.</p>
+        <p><span class="project-title">Hablen CRM:</span> AI-orchestrated CRM product focused on lead, account, and operational workflows.</p>
+        <p><span class="project-title">hablen-newsite:</span> Modern business website refresh with responsive layout, clearer messaging, and improved user presentation.</p>
+        <p><span class="project-title">Job Intelligence Platform:</span> Career-tech product concept for job-fit analysis, role discovery, and application tracking.</p>
+        <p><span class="project-title">File Generator, Expense Tracker, Interactive Counter:</span> Utility and frontend products demonstrating automation thinking, structured workflows, state management, and usable UI execution.</p>
     </section>
-
 </body>
 
 </html>
