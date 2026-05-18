@@ -96,14 +96,13 @@
                     </div>
 
                     <div class="code-card test-code">
-                        <div>Test (Playwright)<span>TS</span></div>
-                        <pre>test('user can place order', async ({ page }) => {
-  await page.goto('/');
-  await page.getByRole('button',
-    { name: 'Add to cart' }).click();
-  await expect(page.getByText('Order
-  placed')).toBeVisible();
-});</pre>
+                        <div>UI Test (Selenium + TestNG)<span>Java</span></div>
+                        <pre>@Test
+public void userCanPlaceOrder() {
+  loginPage.open();
+  productPage.addToCart("Order");
+  Assert.assertTrue(orderPage.isPlaced());
+}</pre>
                     </div>
 
                     <div class="code-card api-code">
@@ -130,7 +129,7 @@
                     <i data-lucide="badge-check"></i>
                     <div>
                         <h3>QA Automation</h3>
-                        <p>Build robust, maintainable automation frameworks using Playwright, Selenium, Cypress and TestNG with a focus on reliability and speed.</p>
+                        <p>Build robust, maintainable automation frameworks using Selenium WebDriver, QMetry/QAF, TestNG, Cucumber BDD, and Java with a focus on reliability and speed.</p>
                     </div>
                 </article>
                 <article>
