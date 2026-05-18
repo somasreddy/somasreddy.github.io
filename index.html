@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Somasekhar V - Senior QA Automation Engineer, SDET, and AI-orchestrated product builder portfolio.">
     <title>Somasekhar V | Senior QA Automation Engineer & AI Product Builder</title>
-    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,14 +18,11 @@
         <div class="nav-container">
             <a class="nav-brand" href="#hero">Somasekhar V</a>
             <div class="nav-menu" aria-label="Primary navigation">
-                <a href="#hero" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
+                <a href="#about" class="nav-link">Profile</a>
                 <a href="#skills" class="nav-link">Skills</a>
-                <a href="#portfolio" class="nav-link">Portfolio</a>
                 <a href="#projects" class="nav-link">Projects</a>
-                <a href="#tech-stack" class="nav-link">Tech Stack</a>
-                <a href="#blog" class="nav-link">Blog</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="resume.html" class="nav-link">Resume</a>
+                <a href="#contact" class="nav-link nav-cta">Contact</a>
             </div>
         </div>
     </nav>
@@ -34,75 +31,59 @@
         <section id="hero" class="hero-section">
             <div class="container hero-grid">
                 <div class="hero-copy">
-                    <h1 class="hero-name">Somasekhar V</h1>
-                    <h2 class="hero-role">Senior QA Automation Engineer <span class="role-pipe">|</span><br> SDET <span class="role-pipe">|</span> AI-Orchestrated Product Builder</h2>
+                    <p class="section-kicker">Senior QA Automation Engineer | SDET | AI-Orchestrated Product Builder</p>
+                    <h1>Quality engineering leader building automation systems and AI-enabled products.</h1>
                     <p class="hero-description">
-                        Senior QA Automation Engineer with 9+ years of experience building reliable UI/API automation, modernizing QA workflows, and translating product requirements into testable engineering systems. Combines Java, Selenium, Rest Assured, and Newman depth with AI-orchestrated product delivery across QA tools, CRM, career intelligence, business websites, and productivity apps.
+                        I bring 9+ years across QA automation, Java, Selenium, QMetry/QAF, Rest Assured, TestNG, Newman, API validation,
+                        DMS workflows, and low-code enterprise platforms, with hands-on ownership of frameworks built from scratch and recent work orchestrating AI-assisted
+                        web products from concept to working implementation.
                     </p>
                     <div class="hero-actions">
-                        <a class="btn btn-primary" href="#projects"><i data-lucide="chevron-right"></i> View Portfolio</a>
-                        <a class="btn-outline" href="resume.html"><i data-lucide="download"></i> Download Resume</a>
+                        <a class="btn btn-primary" href="#projects"><i data-lucide="layout-dashboard"></i> View Portfolio</a>
+                        <a class="btn btn-secondary" href="resume.html"><i data-lucide="file-text"></i> View Resume</a>
+                    </div>
+                    <div class="hero-contact" aria-label="Contact summary">
+                        <span><i data-lucide="map-pin"></i> Bengaluru, India</span>
+                        <a href="mailto:Somasekhar.r@outlook.com"><i data-lucide="mail"></i> Somasekhar.r@outlook.com</a>
+                        <a href="tel:+919008979099"><i data-lucide="phone"></i> +91-900 8979099</a>
                     </div>
                 </div>
 
-                <div class="hero-visual">
-                    <div class="glass-panel main-pipeline">
-                        <div class="panel-header">
-                            <div class="mac-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
-                            <span class="panel-title">Quality_Orchestration.ts</span>
-                        </div>
-                        <div class="panel-body">
-                            <div class="code-line"><span class="keyword">import</span> { <span class="variable">AI</span>, <span class="variable">Automation</span> } <span class="keyword">from</span> <span class="string">'@somasekhar/core'</span>;</div>
-                            <div class="code-line"><br></div>
-                            <div class="code-line"><span class="keyword">const</span> <span class="variable">pipeline</span> = <span class="keyword">new</span> <span class="class">AutomationPipeline</span>({</div>
-                            <div class="code-line indent">  engine: <span class="string">'Playwright & RestAssured'</span>,</div>
-                            <div class="code-line indent">  ai_assistant: <span class="boolean">true</span>,</div>
-                            <div class="code-line indent">  coverage: <span class="string">'E2E + API'</span></div>
-                            <div class="code-line">});</div>
-                            <div class="code-line"><br></div>
-                            <div class="code-line"><span class="keyword">await</span> pipeline.<span class="method">execute</span>();</div>
-                        </div>
+                <div class="architecture-panel" aria-label="Quality engineering and AI orchestration visual">
+                    <div class="panel-topline">
+                        <span>QA Architecture Console</span>
+                        <span class="status-dot">Active</span>
                     </div>
-
-                    <div class="glass-panel floating-card ai-card">
-                        <div class="f-icon-glow"><i data-lucide="sparkles"></i></div>
-                        <div class="f-text">
-                            <h4>AI Test Generation</h4>
-                            <p>Automated impact analysis & triage</p>
-                        </div>
+                    <div class="pipeline-row">
+                        <div class="pipeline-step"><i data-lucide="git-branch"></i><span>Requirements</span></div>
+                        <div class="pipeline-step"><i data-lucide="braces"></i><span>API Gates</span></div>
+                        <div class="pipeline-step"><i data-lucide="bot"></i><span>AI Assist</span></div>
+                        <div class="pipeline-step"><i data-lucide="shield-check"></i><span>Release Quality</span></div>
                     </div>
-
-                    <div class="glass-panel floating-card api-card">
-                        <div class="f-icon-glow blue"><i data-lucide="network"></i></div>
-                        <div class="f-text">
-                            <h4>API Validation</h4>
-                            <p>Microservices & Cloud workflows</p>
+                    <div class="console-grid">
+                        <div class="console-card wide">
+                            <span class="console-label">Primary Stack</span>
+                            <strong>Java + Selenium + QMetry/QAF + Rest Assured + TestNG + Newman</strong>
+                        </div>
+                        <div class="console-card">
+                            <span class="console-label">API Assets</span>
+                            <strong>133+ presets</strong>
+                        </div>
+                        <div class="console-card">
+                            <span class="console-label">Portfolio</span>
+                            <strong>8 products</strong>
+                        </div>
+                        <div class="console-card wide code-card">
+                            <code>orchestrate(qa_strategy, ai_tools, product_delivery)</code>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="container features-4col">
-                <div class="feature-col">
-                    <div class="f-icon"><i data-lucide="settings-2"></i><span class="f-badge check-badge"><i data-lucide="check"></i></span></div>
-                    <h3>QA Automation</h3>
-                    <p>Build robust, maintainable automation frameworks using Playwright, Selenium, Cypress and TestNG with a focus on reliability and speed.</p>
-                </div>
-                <div class="feature-col">
-                    <div class="f-icon"><i data-lucide="cloud"></i><span class="f-badge api-badge">API</span></div>
-                    <h3>API Testing</h3>
-                    <p>Design and automate API tests with Rest Assured, Postman, and contract testing to ensure secure, performant, and reliable services.</p>
-                </div>
-                <div class="feature-col">
-                    <div class="f-icon"><i data-lucide="brain-circuit"></i></div>
-                    <h3>AI Product Orchestration</h3>
-                    <p>Leverage AI to generate tests, analyze impacts, triage defects, and orchestrate quality workflows that drive smarter, faster decisions.</p>
-                </div>
-                <div class="feature-col">
-                    <div class="f-icon"><i data-lucide="briefcase"></i></div>
-                    <h3>Product Portfolio</h3>
-                    <p>Engineer end-to-end products and internal tools that solve real-world problems and deliver measurable value.</p>
-                </div>
+            <div class="capability-strip">
+                <span>Automation Architecture</span>
+                <span>API & DMS Validation</span>
+                <span>AI Product Orchestration</span>
+                <span>Modern Web Delivery</span>
             </div>
         </section>
 
@@ -114,10 +95,13 @@
                 </div>
                 <div class="copy-stack">
                     <p>
-                        My core strength is translating complex systems into reliable validation strategies: Java, Selenium WebDriver, TestNG, Cucumber BDD, Rest Assured, regression design, defect analysis, test data, release confidence, and stakeholder-ready reporting.
+                        My core strength is translating complex systems into reliable validation strategies: UI automation,
+                        API automation, regression design, defect analysis, test data, release confidence, and stakeholder-ready reporting.
                     </p>
                     <p>
-                        Recently, I extended that foundation into AI-assisted product delivery. Using tools like Claude, Gemini, Cursor, Antigravity, and OpenAI APIs, I orchestrate the development of CRMs, job-intelligence platforms, and code-generation tools—positioning AI as an engineering accelerator to clarify requirements, generate options, and drive products to production.
+                        Recently, I extended that foundation into AI-assisted product delivery by orchestrating CRM, job-intelligence,
+                        productivity, and code-generation projects. I position AI as an engineering accelerator: clarifying requirements,
+                        generating implementation options, reviewing outputs, and steering quality until the product is usable.
                     </p>
                 </div>
             </div>
@@ -133,32 +117,32 @@
                     <article class="skill-card">
                         <i data-lucide="test-tube-2"></i>
                         <h3>Automation Architecture</h3>
-                        <p>Java, Selenium WebDriver, TestNG, Cucumber BDD, Rest Assured, Newman, Postman, Maven, Jenkins.</p>
+                        <p>Selenium WebDriver, Java, QMetry/QAF, TestNG, Cucumber BDD, Page Object Model, hybrid frameworks, regression suites, cross-browser validation.</p>
                     </article>
                     <article class="skill-card">
                         <i data-lucide="server-cog"></i>
-                        <h3>QA Strategy</h3>
-                        <p>Regression, smoke, E2E, API, integration, browser compatibility, defect triage, test planning.</p>
+                        <h3>API & Backend Quality</h3>
+                        <p>Rest Assured, TestNG, Postman, Newman, JSON/XML, schema validation, API collections, DMS upload flows, microservice validation, test data verification.</p>
                     </article>
                     <article class="skill-card">
                         <i data-lucide="bot"></i>
-                        <h3>AI/Product</h3>
-                        <p>Claude, Gemini, Cursor, Antigravity, Emergent, OpenAI API, prompt orchestration, AI-assisted delivery.</p>
+                        <h3>AI Product Orchestration</h3>
+                        <p>Prompt engineering, AI-assisted coding, workflow decomposition, requirements-to-UI generation, iterative review, product QA.</p>
                     </article>
                     <article class="skill-card">
                         <i data-lucide="workflow"></i>
                         <h3>Delivery & CI/CD</h3>
-                        <p>Jenkins, Git/GitHub, Maven, Agile/Scrum, Jira, release validation, defect lifecycle management.</p>
+                        <p>Jenkins, Git/GitHub, Maven, Docker basics, Agile/Scrum, Jira, QMetry, release validation, defect lifecycle management.</p>
                     </article>
                     <article class="skill-card">
                         <i data-lucide="monitor-check"></i>
-                        <h3>Enterprise QA</h3>
-                        <p>API validation, DMS upload workflows, file validation, security edge-case coverage, and large-file boundaries.</p>
+                        <h3>Testing Coverage</h3>
+                        <p>Functional, regression, smoke, sanity, API, UI, desktop automation, data validation, low-code platform testing, risk-based QA.</p>
                     </article>
                     <article class="skill-card">
-                        <i data-lucide="layout"></i>
-                        <h3>Modern Stack</h3>
-                        <p>React, Next.js, TypeScript, Vite, Tailwind CSS, FastAPI, Supabase, Firebase, PostgreSQL, Vercel.</p>
+                        <i data-lucide="shield"></i>
+                        <h3>Security-Aware QA</h3>
+                        <p>OWASP Top 10 awareness, Burp Suite exposure, secure workflow review, access control validation, privacy and role-based testing.</p>
                     </article>
                 </div>
             </div>
@@ -174,13 +158,49 @@
                 <div class="project-grid">
                     <article class="project-card featured">
                         <div class="project-heading">
+                            <i data-lucide="layers-3"></i>
+                            <div>
+                                <h3>ECAP QMetry Automation Framework</h3>
+                                <p>Framework built from scratch for enterprise UI regression</p>
+                            </div>
+                        </div>
+                        <p>Developed a QMetry/QAF-based Selenium automation framework for ECAP low-code platform validation, using Maven, Cucumber/TestNG execution, JSON-driven test data, reusable step definitions, screenshot/reporting configuration, and Jenkins-ready suites.</p>
+                        <ul>
+                            <li>Covered business rules, design-time workflows, DMS/eFiling, permissions, dashboards, reporting, and customer issue regression packs.</li>
+                            <li>Structured framework assets for maintainable feature coverage, repeatable runs, generated result dashboards, and CI execution.</li>
+                        </ul>
+                        <div class="tag-row"><span>QMetry/QAF</span><span>Selenium</span><span>Cucumber</span><span>TestNG</span><span>Jenkins</span></div>
+                    </article>
+
+                    <article class="project-card featured">
+                        <div class="project-heading">
+                            <i data-lucide="shield-check"></i>
+                            <div>
+                                <h3>Rest Assured TestNG Framework</h3>
+                                <p>API framework for ECAP and DMS validation</p>
+                            </div>
+                        </div>
+                        <p>Designed Rest Assured + TestNG API automation frameworks for ECAP services, DMS files, folders, permissions, users, teams, objects, document types, document tags, and company workflows with externalized payloads and configuration.</p>
+                        <ul>
+                            <li>Implemented reusable base classes, response verifiers, data providers, URL utilities, JSON payload management, and Extent/HTML reporting.</li>
+                            <li>Evolved the framework into a Java 21 version with Allure, JaCoCo, SonarQube settings, retry/listener utilities, schema validation, unified dashboards, and Jenkins CI/CD publishing.</li>
+                        </ul>
+                        <div class="tag-row"><span>Rest Assured</span><span>TestNG</span><span>Allure</span><span>JaCoCo</span><span>SonarQube</span></div>
+                    </article>
+
+                    <article class="project-card featured">
+                        <div class="project-heading">
                             <i data-lucide="blocks"></i>
                             <div>
                                 <h3>Code Generation Studio</h3>
-                                <p>Escriba/internal QA platform</p>
+                                <p>AI-assisted QA and API productivity platform</p>
                             </div>
                         </div>
-                        <p>AI-powered QA modernization platform converting legacy Java QA tests into REST Assured/API automation assets with 133+ API presets, 8-file output, AI micro-fixes, anomaly detection, auto-healing, impact analysis, Git workflow, MCP server, and VS Code extension.</p>
+                        <p>Orchestrated a modern platform for generating API test assets, scripts, and developer-ready outputs, aligning AI-assisted generation with practical QA review and reusable execution workflows.</p>
+                        <ul>
+                            <li>Structured API presets, prompt-driven generation, and workflow review patterns.</li>
+                            <li>Positioned as a bridge between QA automation, developer productivity, and AI delivery.</li>
+                        </ul>
                         <div class="tag-row"><span>AI Coding</span><span>API Automation</span><span>QA Tools</span></div>
                     </article>
 
@@ -189,35 +209,11 @@
                             <i data-lucide="database-zap"></i>
                             <div>
                                 <h3>Newman DMS Automation</h3>
-                                <p>Escriba/API validation</p>
+                                <p>Enterprise document workflow validation</p>
                             </div>
                         </div>
-                        <p>Postman/Newman DMS upload suite with collection/environment execution, iteration CSVs, HTML/CSV reporting, Unicode/no-extension files, 10 MB to 1 GB boundaries, blocked executables, MIME spoofing, corrupted archives, and zip-bomb cases.</p>
+                        <p>Built and maintained Newman/Postman automation for DMS upload and validation flows, supporting faster checks across API-heavy enterprise document scenarios.</p>
                         <div class="tag-row"><span>Newman</span><span>Postman</span><span>DMS</span></div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-heading">
-                            <i data-lucide="test-tube-2"></i>
-                            <div>
-                                <h3>ECAP QA Framework (QMetry)</h3>
-                                <p>AgileApps / Core System Testing</p>
-                            </div>
-                        </div>
-                        <p>Built from scratch using Java 11, TestNG, Cucumber BDD, and Selenium WebDriver. Designed custom reporting dashboard, implemented SikuliX for image interactions, and developed robust data-driven Excel/JSON suites for end-to-end AgileApps validation.</p>
-                        <div class="tag-row"><span>Java 11</span><span>Selenium</span><span>Cucumber BDD</span></div>
-                    </article>
-
-                    <article class="project-card">
-                        <div class="project-heading">
-                            <i data-lucide="network"></i>
-                            <div>
-                                <h3>ECAP Rest-Assured API</h3>
-                                <p>Microservices Validation Suite</p>
-                            </div>
-                        </div>
-                        <p>Architected native TestNG + Rest-Assured (Java 21) API framework from scratch. Integrated Allure/Extent reports, dynamic JSON/WireMock data handling, and custom JsonReporterListener for structural test result bridging.</p>
-                        <div class="tag-row"><span>Java 21</span><span>Rest-Assured</span><span>TestNG</span></div>
                     </article>
 
                     <article class="project-card">
@@ -225,11 +221,11 @@
                             <i data-lucide="briefcase-business"></i>
                             <div>
                                 <h3>Hablen CRM</h3>
-                                <p>Hablen Group</p>
+                                <p>AI-orchestrated customer management product</p>
                             </div>
                         </div>
-                        <p>Next.js, React, TypeScript, Supabase, and Vercel CRM for contacts, leads, deals, Kanban pipeline, billing, invoices, payments, inventory, purchase orders, service tickets, AMC workflows, delivery signatures, and dashboards.</p>
-                        <div class="tag-row"><span>Next.js</span><span>Supabase</span><span>CRM</span></div>
+                        <p>Directed the product flow, interface structure, and quality review for a CRM experience shaped around lead tracking, account management, and actionable sales operations.</p>
+                        <div class="tag-row"><span>CRM</span><span>Product UX</span><span>AI Orchestration</span></div>
                     </article>
 
                     <article class="project-card">
@@ -237,11 +233,11 @@
                             <i data-lucide="globe-2"></i>
                             <div>
                                 <h3>hablen-newsite</h3>
-                                <p>Hablen Group</p>
+                                <p>Modern business website experience</p>
                             </div>
                         </div>
-                        <p>Next.js business website with offline-first Contentful sync, local JSON/media cache, SEO utilities, product catalogue, careers portal, Google Sheets newsletter capture, multimedia brand sections, and Vercel/VPS deployment guidance.</p>
-                        <div class="tag-row"><span>Next.js</span><span>Contentful</span><span>Vercel</span></div>
+                        <p>Orchestrated a refreshed web presence with cleaner navigation, clearer messaging, responsive layouts, and a sharper first impression for stakeholders and customers.</p>
+                        <div class="tag-row"><span>Website</span><span>Responsive UI</span><span>Content Design</span></div>
                     </article>
 
                     <article class="project-card">
@@ -249,11 +245,11 @@
                             <i data-lucide="radar"></i>
                             <div>
                                 <h3>Job Intelligence Platform</h3>
-                                <p>Personal AI career product</p>
+                                <p>Career analytics and opportunity tracking</p>
                             </div>
                         </div>
-                        <p>Next.js + FastAPI + PostgreSQL + Celery AI job-search assistant with OpenAI/Gemini config, job discovery/verification, ATS resume generation, cover-letter generation, interview coaching, market radar, outreach tools, and application tracking.</p>
-                        <div class="tag-row"><span>FastAPI</span><span>Celery</span><span>Next.js</span></div>
+                        <p>Orchestrated a platform concept for role discovery, job-fit analysis, application tracking, and market-aware career decision support using AI-assisted workflows.</p>
+                        <div class="tag-row"><span>Career Tech</span><span>Analytics</span><span>AI Workflow</span></div>
                     </article>
 
                     <article class="project-card">
@@ -261,11 +257,11 @@
                             <i data-lucide="file-plus-2"></i>
                             <div>
                                 <h3>File Generator</h3>
-                                <p>Personal QA utility</p>
+                                <p>Structured output generation utility</p>
                             </div>
                         </div>
-                        <p>Client-side TestFileGen PRO for QA engineers to generate/validate documents, data files, corrupted payloads, MIME mismatches, large files up to 2 GB, security payloads, schema CSV/JSON, and magic-byte validation.</p>
-                        <div class="tag-row"><span>QA Utility</span><span>Test Data</span><span>Validation</span></div>
+                        <p>Created a utility-style product for generating files and repeatable outputs, useful for reducing manual setup effort and improving consistency in everyday workflows.</p>
+                        <div class="tag-row"><span>Utility</span><span>Automation</span><span>Productivity</span></div>
                     </article>
 
                     <article class="project-card">
@@ -273,11 +269,11 @@
                             <i data-lucide="wallet-cards"></i>
                             <div>
                                 <h3>Expense Tracker</h3>
-                                <p>Personal productivity app</p>
+                                <p>Personal finance workflow product</p>
                             </div>
                         </div>
-                        <p>React/Vite/TypeScript app with Firebase Auth/Firestore, multi-family profiles, categories, dashboards, charts, budgets, CSV/PDF export, voice input, Android SMS transaction capture, PWA/mobile support, and GitHub Pages deployment.</p>
-                        <div class="tag-row"><span>React</span><span>Firebase</span><span>PWA</span></div>
+                        <p>Orchestrated a clean expense tracking experience focused on entry, categorization, summaries, and practical day-to-day financial visibility.</p>
+                        <div class="tag-row"><span>Finance UX</span><span>Dashboard</span><span>Data Entry</span></div>
                     </article>
 
                     <article class="project-card">
@@ -285,10 +281,10 @@
                             <i data-lucide="mouse-pointer-click"></i>
                             <div>
                                 <h3>Interactive Counter</h3>
-                                <p>Personal learning app</p>
+                                <p>Small interaction and state-management app</p>
                             </div>
                         </div>
-                        <p>Lightweight frontend project for state management, event handling, responsive behavior, and AI-guided rapid prototyping.</p>
+                        <p>Built a focused interactive application to demonstrate state changes, UI feedback, and simple component behavior with a polished user-facing experience.</p>
                         <div class="tag-row"><span>Frontend</span><span>Interaction</span><span>UI State</span></div>
                     </article>
                 </div>
