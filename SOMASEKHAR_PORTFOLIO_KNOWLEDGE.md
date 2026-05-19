@@ -181,11 +181,36 @@ Positioning:
 
 Career-tech product concept for job-fit analysis, role discovery, and application tracking using AI-assisted workflows.
 
-### File Generator
+### TestFileGen PRO
 
 Positioning:
 
-Utility product for generating files and repeatable outputs, reducing manual setup and improving consistency.
+AI-developed, client-side QA utility for generating and validating test files across image, document, data, and web formats. It is especially relevant to QA, DMS, upload validation, API testing, and security-edge-case testing.
+
+Source folder:
+
+- `C:\Users\somasekharv\OneDrive - ESCRIBA AG\Desktop\My Docs\MyApps\file-generator`
+
+Evidence observed:
+
+- Single-page browser app: `FileGenerator.html`
+- Vercel-ready deployment via `vercel.json`
+- Live demo referenced in README: `https://file-generator-pro.vercel.app`
+- Multi-format generation: PNG, JPEG, GIF, BMP, TIFF, WebP, SVG, ICO, PDF, DOCX, XLSX, PPTX, TXT, RTF, CSV, JSON, XML, HTML, CSS, JS
+- Batch generation and ZIP download
+- File size boundary generation from KB up to 2GB
+- Dynamic filename variables such as `{ext}`, `{size}`, `{date}`, `{time}`, `{rand}`
+- Unicode, RTL, emoji-heavy, numeric, encoding, and line-ending controls
+- Corrupted structures: truncated files, broken magic bytes, zero-filled bodies, random bytes
+- Security edge cases: XSS, SQLi, path traversal strings embedded in generated files
+- MIME mismatch and format tricks such as JPEG content saved with `.pdf` extension
+- Encrypted ZIP archive support
+- CSV/JSON schema builder
+- File validation tab using magic-byte validation, file size analysis, offsets, EOF marker checks, and mismatched format detection
+
+Resume wording:
+
+TestFileGen PRO is an AI-developed client-side QA utility for generating and validating test files across images, documents, data, and web formats. It supports file-size boundary testing up to 2GB, corrupted payloads, MIME mismatches, security strings, encrypted ZIPs, CSV/JSON schema scaffolding, and magic-byte validation for upload, DMS, API, and edge-case testing workflows.
 
 ### Expense Tracker
 
@@ -251,4 +276,3 @@ Before pushing, verify:
 - No sensitive files or backup folders are committed unintentionally.
 - `index.html`, `style.css`, `script.js`, `resume.html`, and this knowledge file are intended.
 - Backup folders should usually remain local and untracked unless explicitly requested.
-
