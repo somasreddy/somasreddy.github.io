@@ -493,6 +493,19 @@ a {
     color: #fff;
 }
 
+@media (min-width: 541px) {
+    .contact-actions {
+        flex-wrap: nowrap;
+    }
+
+    .contact-actions .btn {
+        flex: 1 1 0;
+        justify-content: center;
+        min-width: 0;
+        padding: 0 16px;
+    }
+}
+
 .contact-section .btn-primary {
     background: #fff;
     color: var(--navy);
@@ -1199,6 +1212,7 @@ a {
     }
 
     .nav-menu {
+        flex-wrap: nowrap;
         overflow-x: auto;
         padding-bottom: 4px;
         width: 100%;
@@ -1286,6 +1300,14 @@ a {
         width: min(100% - 28px, 1450px);
     }
 
+    .nav-menu {
+        gap: 18px;
+    }
+
+    .nav-link {
+        font-size: 0.92rem;
+    }
+
     .hero-copy h1 {
         font-size: 3.1rem;
     }
@@ -1319,5 +1341,96 @@ a {
     .capability-strip svg {
         height: 46px;
         width: 46px;
+    }
+}
+
+/* Portfolio review fixes: project evidence links, experience section, reduced motion */
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.project-links a {
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    color: var(--navy);
+    display: inline-flex;
+    font-size: 0.85rem;
+    font-weight: 700;
+    gap: 7px;
+    padding: 8px 12px;
+    text-decoration: none;
+}
+
+.project-links a:hover {
+    border-color: var(--teal);
+    color: var(--teal);
+}
+
+.project-links svg {
+    height: 16px;
+    width: 16px;
+}
+
+.experience-list {
+    display: grid;
+    gap: 16px;
+}
+
+.experience-item {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    display: grid;
+    gap: 4px 28px;
+    grid-template-columns: 190px minmax(0, 1fr);
+    padding: 22px;
+}
+
+.experience-dates {
+    color: var(--teal);
+    font-size: 0.9rem;
+    font-weight: 800;
+    padding-top: 2px;
+}
+
+.experience-item h3 {
+    color: var(--navy);
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+}
+
+.experience-item p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.experience-resume-link {
+    margin-top: 24px;
+}
+
+@media (max-width: 640px) {
+    .experience-item {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal-item {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+@media (max-width: 360px) {
+    .hero-copy h1 {
+        font-size: 2.7rem;
     }
 }

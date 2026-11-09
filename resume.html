@@ -134,7 +134,44 @@
             font-weight: 800;
         }
 
+
+        .page-nav {
+            align-items: center;
+            display: flex;
+            font-size: 0.92rem;
+            justify-content: space-between;
+            margin-bottom: 26px;
+        }
+
+        .page-nav a,
+        .page-nav button {
+            background: none;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            color: var(--navy);
+            cursor: pointer;
+            font: inherit;
+            font-weight: 700;
+            padding: 7px 12px;
+            text-decoration: none;
+        }
+
+        .page-nav a:hover,
+        .page-nav button:hover {
+            border-color: var(--teal);
+            color: var(--teal);
+        }
+
+        .page-nav-actions {
+            display: flex;
+            gap: 8px;
+        }
+
         @media print {
+            .page-nav {
+                display: none;
+            }
+
             body {
                 max-width: none;
                 padding: 0;
@@ -142,8 +179,19 @@
             }
 
             section {
-                break-inside: avoid;
                 margin-top: 16px;
+            }
+
+            header,
+            h2,
+            h3,
+            .job-head {
+                break-after: avoid;
+            }
+
+            li,
+            .skill-line {
+                break-inside: avoid;
             }
 
             a {
@@ -169,13 +217,20 @@
 </head>
 
 <body>
+    <nav class="page-nav">
+        <a href="index.html">&larr; Back to portfolio</a>
+        <span class="page-nav-actions">
+            <a href="Somasekhar_V_Resume.pdf" download>Download PDF</a>
+            <button type="button" onclick="window.print()">Print</button>
+        </span>
+    </nav>
     <header>
         <h1>Somasekhar V</h1>
         <div class="headline">Senior QA Automation Engineer | SDET | AI-Orchestrated Product Builder</div>
         <div class="contact">
             <span>Bengaluru, India</span>
-            <a href="mailto:Somasekhar.r@outlook.com">Somasekhar.r@outlook.com</a>
-            <a href="tel:+919008979099">+91-900 8979099</a>
+            <a href="mailto:somasekhar.r@outlook.com">somasekhar.r@outlook.com</a>
+            <a href="tel:+919008979099">+91 90089 79099</a>
             <a href="https://www.linkedin.com/in/somasreddy/">LinkedIn</a>
             <a href="https://github.com/somasreddy">GitHub</a>
         </div>
